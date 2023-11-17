@@ -74,7 +74,15 @@ p {
 }
 
 
-
+.rectangle {
+    width: 1000px;
+    height: 300px;
+    background-color: #3498db;
+   
+    top: 10%;
+    left: 10%;
+    transform: translate(+0%, -0%);
+}
 
 .cube {
     width: 300px;
@@ -83,7 +91,7 @@ p {
     
     top: 50%;
     left: 60%;
-    transform: translate(+350%, -0%); /* Az eltolás a kocka középre igazításához */
+    transform: translate(+350%, -100%); /* Az eltolás a kocka középre igazításához */
 }
 
 .cube img {
