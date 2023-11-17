@@ -33,18 +33,21 @@ p {
 }
 
 
+
 .container4 {
     display: flex;
+    justify-content: space-between;
+    margin: 0 190px; /* Példaként a távolság az oldalsó margókból származik. */
     height: 300px; /* Példaként állítsd be a konténer magasságát. */
 }
 
 .section2 {
     background-color: lightgray; /* Példaként háttereszköz beállítása. */
-    padding: 40px; /* Példaként belső margó hozzáadása. */
+    padding: 120px; /* Példaként belső margó hozzáadása. */
 }
 
 .section:nth-child(1) {
-    flex: 2; /* Az első (bal oldali) rész a flex értékét hagyjuk 1-nek, tehát az egész szélességet elfoglalja. */
+    flex: 1; /* Az első (bal oldali) rész a flex értékét hagyjuk 1-nek, tehát az egész szélességet elfoglalja. */
 }
 
 .section:nth-child(2) {
