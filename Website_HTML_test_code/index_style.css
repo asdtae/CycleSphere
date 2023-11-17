@@ -24,10 +24,10 @@ p {
 .container3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px; /* Példaként cellák közötti tér hozzáadása. */
+    gap:   30px; /* Példaként cellák közötti tér hozzáadása. */
 }
 
 .section {
     background-color: lightgray;
-    padding: 20px;
+    padding: 40px;
 }
