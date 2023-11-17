@@ -54,3 +54,40 @@ p {
     flex: 4; /* A második (jobb oldali) rész flex értéke 2, tehát kétszer akkora területet foglal el, mint az első rész. */
 }
 
+
+.container4 {
+    display: flex;
+    margin: 80 120px; /* Példaként a távolság az oldalsó margókból származik. */
+    height: 300px; /* Példaként állítsd be a konténer magasságát. */
+}
+.section3 {
+    background-color: lightgray; /* Példaként háttereszköz beállítása. */
+    padding: 120px; /* Példaként belső margó hozzáadása. */
+}
+
+.section:nth-child(3) {
+    flex: 4; /* Az első (bal oldali) rész a flex értékét hagyjuk 1-nek, tehát az egész szélességet elfoglalja. */
+}
+
+.section:nth-child(4) {
+    flex: 1; /* A második (jobb oldali) rész flex értéke 2, tehát kétszer akkora területet foglal el, mint az első rész. */
+}
+
+.container5 {
+    display: flex;
+    margin: 80 120px; /* Példaként a távolság az oldalsó margókból származik. */
+    height: 300px; /* Példaként állítsd be a konténer magasságát. */
+}
+.section3 {
+    background-color: lightgray; /* Példaként háttereszköz beállítása. */
+    padding: 120px; /* Példaként belső margó hozzáadása. */
+}
+
+.section:nth-child(3) {
+    flex: 4; /* Az első (bal oldali) rész a flex értékét hagyjuk 1-nek, tehát az egész szélességet elfoglalja. */
+}
+
+.section:nth-child(4) {
+    flex: 1; /* A második (jobb oldali) rész flex értéke 2, tehát kétszer akkora területet foglal el, mint az első rész. */
+}
+
