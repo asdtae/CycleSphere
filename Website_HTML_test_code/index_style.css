@@ -10,12 +10,24 @@ p {
 }
 
 .container2 {
-    width: 37%; /* Példaként 80%-os szélességű konténer. Az értéket az igényeidhez igazíthatod. */
+    width: 45%; /* Példaként 80%-os szélességű konténer. Az értéket az igényeidhez igazíthatod. */
     margin: 0 auto; /* Automatikus középre igazítás a maradék terület elosztásával. */
-    padding: 100px; /* Példaként 20 pixeles belső margó a tartalom körül. */
+    padding: 80px; /* Példaként 20 pixeles belső margó a tartalom körül. */
     background-color: #f0f0f0; /* Háttérszín a tartalom körül. */
 }
 
 p {
     text-align: center; /* A szöveget igazítja a bal és jobb oldali margóhoz. */
+}
+
+
+.container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Példaként cellák közötti tér hozzáadása. */
+}
+
+.section {
+    background-color: lightgray;
+    padding: 20px;
 }
