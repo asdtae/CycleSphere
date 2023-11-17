@@ -36,8 +36,8 @@ p {
 
 .container4 {
     display: flex;
-    justify-content: space-between;
-    margin: 0 190px; /* Példaként a távolság az oldalsó margókból származik. */
+   
+    margin: 80 120px; /* Példaként a távolság az oldalsó margókból származik. */
     height: 300px; /* Példaként állítsd be a konténer magasságát. */
 }
 
@@ -51,5 +51,6 @@ p {
 }
 
 .section:nth-child(2) {
-    flex: 3; /* A második (jobb oldali) rész flex értéke 2, tehát kétszer akkora területet foglal el, mint az első rész. */
+    flex: 4; /* A második (jobb oldali) rész flex értéke 2, tehát kétszer akkora területet foglal el, mint az első rész. */
 }
+
