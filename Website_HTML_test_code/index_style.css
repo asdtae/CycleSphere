@@ -1,0 +1,10 @@
+.container {
+    width: 70%; /* Példaként 80%-os szélességű konténer. Az értéket az igényeidhez igazíthatod. */
+    margin: 0 auto; /* Automatikus középre igazítás a maradék terület elosztásával. */
+    padding: 200px; /* Példaként 20 pixeles belső margó a tartalom körül. */
+    background-color: #f0f0f0; /* Háttérszín a tartalom körül. */
+}
+
+p {
+    text-align: justify; /* A szöveget igazítja a bal és jobb oldali margóhoz. */
+}
