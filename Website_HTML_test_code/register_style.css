@@ -21,14 +21,8 @@
     }
 
     .container2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 5vh; /* A négyzet középre igazításához az egész ablakmagasságot (viewport height) használjuk */
-    }
-    p {
-        text-align: center; /* A szöveget igazítja a bal és jobb oldali margóhoz. */
-    }
+        padding: 1px;}
+  
 
 .section {
     background-color: lightgray;
