@@ -52,10 +52,17 @@ body {
 }
 
 .infinite-container,
-.infinite-container2 {
+.infinite-container2
+{
     height: 100000%; /* Vagy használhatod a height: 100%;-t is, ha a szülőelem is végtelen méretű */
     padding: 20px;
     background-color: #ff9999; /* Háttérszín módosítása az igényeid szerint */
+}
+
+.infinite-container3 {
+    height: 100000%; /* Vagy használhatod a height: 100%;-t is, ha a szülőelem is végtelen méretű */
+    padding: 20px;
+    background-color: #ffffff; /* Háttérszín módosítása az igényeid szerint */
 }
 
 /* Bővítheted a stílust az igényeid szerint */
