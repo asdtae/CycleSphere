@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "cyclesphere",
+    "slug": "cyclesphere",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.asdtae.cyclesphere"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.asdtae.cyclesphere"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b72b51c2-3b94-4213-ab78-f6e47f93f3e0"
+      }
+    },
+    "owner": "asdtae",
+    "plugins": [
+      "expo-build-properties"
+    ]
+  }
+}
