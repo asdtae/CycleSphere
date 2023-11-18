@@ -50,8 +50,8 @@
     transform: translate(+525%, -140%)}
 
     .circle {
-        width: 100px;
-        height: 100px;
+        width: 275px;
+        height: 275px;
         background-color: blue; /* Helyettesítsd a saját színeddel */
-        border-radius: 50% 
-        transform: translate(+525%, -140%)}
+        border-radius: 50% ;
+        transform: translate(+300%, -124%)}
