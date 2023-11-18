@@ -38,13 +38,15 @@
             padding: 20px;
             background-color: #ffffff;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .infinite-text {
-            white-space: nowrap;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            width: 100%; /* Szélességet a teljes tartalomra állítjuk */
         }
     </style>
     <title>Fixed Sidebar Example</title>
