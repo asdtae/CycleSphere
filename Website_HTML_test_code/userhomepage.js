@@ -1,6 +1,5 @@
 const contentDiv = document.getElementById('content');
 const infiniteTextParagraph = document.getElementById('infiniteText');
-let isScrolling = false;
 
 function generateMoreText() {
     const additionalText = " CycleSphere";

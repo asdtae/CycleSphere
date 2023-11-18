@@ -17,46 +17,45 @@ body {
 
 .container {
     display: flex;
-   
-    margin:  320px; /* Példaként a távolság az oldalsó margókból származik. */
-    height:700px; /* Példaként állítsd be a konténer magasságát. */
+    margin: 320px; /* Példaként a távolság az oldalsó margókból származik. */
+    height: 700px; /* Példaként állítsd be a konténer magasságát. */
 }
 
-.container2{
-display: flex;
-   
-    margin:  10px; /* Példaként a távolság az oldalsó margókból származik. */
+.container2,
+.container3 {
+    display: flex;
+    margin: 10px; /* Példaként a távolság az oldalsó margókból származik. */
     height: 20px; /* Példaként állítsd be a konténer magasságát. */ 
 }
 
-.container3{
-    display: flex;
-       
-        margin:  px; /* Példaként a távolság az oldalsó margókból származik. */
-        height: 20px; /* Példaként állítsd be a konténer magasságát. */ 
-    }
+.rectangle {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Itt változtathatod az oszlopok szélességét */
+    gap: 0px; /* Változtathatod a részecskék közötti rés méretét */
+}
 
-    .rectangle {
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr; /* Itt változtathatod az oszlopok szélességét */
-        gap: 0px; /* Változtathatod a részecskék közötti rés méretét */
-    }
-    
-    .part {
-        height: 700px; /* Változtasd a magasságot az igényeid szerint */
-        text-align: center;
-    }
-    
-    .part1 {
-        background-color: #ff9999; /* Változtasd a színeket az igényeid szerint */
-        margin-left: +0px;
-        }
-    
-    .part2 {
-        background-color: #99ff99;
-    }
-    
-    .part3 {
-        background-color: #9999ff;
-        margin-right: +0px
-    }
+.part {
+    height: 700px; /* Változtasd a magasságot az igényeid szerint */
+    text-align: center;
+}
+
+.part1 {
+    background-color: #ff9999; /* Változtasd a színeket az igényeid szerint */
+}
+
+.part2 {
+    background-color: #99ff99;
+}
+
+.part3 {
+    background-color: #9999ff;
+}
+
+.infinite-container,
+.infinite-container2 {
+    height: 100000%; /* Vagy használhatod a height: 100%;-t is, ha a szülőelem is végtelen méretű */
+    padding: 20px;
+    background-color: #ff9999; /* Háttérszín módosítása az igényeid szerint */
+}
+
+/* Bővítheted a stílust az igényeid szerint */
