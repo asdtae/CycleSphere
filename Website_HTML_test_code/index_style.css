@@ -95,12 +95,21 @@ p {
 }
 
 .cube img {
-    width: 10
+    width: 10;
     height: 100%;
-    object-fit: cover; /* Az objektum méretének a konténer méretéhez való illesztése */
+    object-fit:cover; /* Az objektum méretének a konténer méretéhez való illesztése */
 }
 
 .empty-space {
     height: 350px; }/* Kívánt üres terület magassága */
 
 .cube2 {width: 95%; height:120%; margin: 40 40px; background-color: #3498db }
+
+.empty-space2 {
+    height: 350px; }
+
+    
+
+.text {
+    color: white;
+}
