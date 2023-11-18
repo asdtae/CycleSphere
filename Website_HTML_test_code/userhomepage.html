@@ -3,47 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="userhomepage_style.css">
-    <title>Facebook-like Scrollable Header</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            overflow-x: auto;
+            height: 100vh;
+        }
+
+        .fixed-sidebar,
+        .fixed-sidebar-right,
+        .content {
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .fixed-sidebar,
+        .fixed-sidebar-right {
+            width: 200px;
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .infinite-text {
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            width: 100%; /* Szélességet a teljes tartalomra állítjuk */
+        }
+    </style>
+    <title>Fixed Sidebar Example</title>
 </head>
 <body>
 
-    <div class="header" id="scrollHeader">
-        <!-- Header content goes here -->
-        Facebook Header
-    </div>
-
-    <div class="rectangle">
-        <div class="part part1">
-            <div class="infinite-container" id="infiniteContainer">
-                <!-- Infinite container content goes here -->
-                <p>hagyma</p>
-            </div>
+    <div id="container">
+        <div class="fixed-sidebar">
+            <p>Fixed Sidebar - Left</p>
+            <!-- További tartalom ... -->
         </div>
 
-        <div class="part part2">
-            <div class="infinite-container3" id="infiniteContainer3">
-                <div class="content">
-                    <!-- Main content goes here -->
-                    <p id="infiniteText">alma</p>
-                </div>
-            </div>
+        <div class="content" id="scrollableContent">
+            <div class="infinite-text" id="infiniteText"></div>
         </div>
 
-        <div class="part part3">
-            <div class="infinite-container2" id="infiniteContainer2">
-                <!-- Infinite container 2 content goes here -->
-                legyen kitoltve szinnel
-            </div>
+        <div class="fixed-sidebar-right">
+            <p>Fixed Sidebar - Right</p>
+            <!-- További tartalom ... -->
         </div>
     </div>
 
-    <div class="fixed-container">
-        <!-- Fixed container content goes here -->
-        <p>This is the fixed container. It will remain fixed while you scroll.</p>
-    </div>
+    <script>
+        const infiniteText = document.getElementById('infiniteText');
+        let isScrolling = false;
 
-    <script src="userhomepage.js"></script>
+        function generateMoreText() {
+            const additionalText = " CycleSphere";
+
+            // Generate additional text and append it to the paragraph
+            infiniteText.innerHTML += additionalText;
+        }
+
+        // Listen for the scroll event
+        window.addEventListener('scroll', function() {
+            isScrolling = true;
+
+            // Check if the user has scrolled to the bottom of the page
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight && isScrolling) {
+                // Generate more text when the user reaches the bottom
+                generateMoreText();
+                isScrolling = false;
+            }
+        });
+
+        // Initial text generation
+        generateMoreText();
+
+        // Listen for mouse wheel events
+        window.addEventListener('wheel', function(event) {
+            // Check if the user is scrolling down
+            if (event.deltaY > 0) {
+                // Generate more text when scrolling down
+                generateMoreText();
+            }
+        });
+    </script>
 
 </body>
 </html>
