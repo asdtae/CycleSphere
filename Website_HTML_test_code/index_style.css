@@ -1,0 +1,101 @@
+.container {
+    width: 35%; /* Példaként 80%-os szélességű konténer. Az értéket az igényeidhez igazíthatod. */
+    margin: 0 auto; /* Automatikus középre igazítás a maradék terület elosztásával. */
+    padding: 200px; /* Példaként 20 pixeles belső margó a tartalom körül. */
+    background-color: #f0f0f0; /* Háttérszín a tartalom körül. */
+}
+
+p {
+    text-align: center; /* A szöveget igazítja a bal és jobb oldali margóhoz. */
+}
+
+.container2 {
+    width: 45%; /* Példaként 80%-os szélességű konténer. Az értéket az igényeidhez igazíthatod. */
+    margin: 0 auto; /* Automatikus középre igazítás a maradék terület elosztásával. */
+    padding: 80px; /* Példaként 20 pixeles belső margó a tartalom körül. */
+    background-color: #f0f0f0; /* Háttérszín a tartalom körül. */
+}
+
+p {
+    text-align: center; /* A szöveget igazítja a bal és jobb oldali margóhoz. */
+}
+
+
+.container3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:   30px; /* Példaként cellák közötti tér hozzáadása. */
+}
+
+.section {
+    background-color: lightgray;
+    padding: 40px;
+}
+
+
+
+.container4 {
+    display: flex;
+   
+    margin: 80 120px; /* Példaként a távolság az oldalsó margókból származik. */
+    height: 300px; /* Példaként állítsd be a konténer magasságát. */
+}
+
+.section2 {
+    background-color: lightgray; /* Példaként háttereszköz beállítása. */
+    padding: 120px; /* Példaként belső margó hozzáadása. */
+}
+
+.section:nth-child(1) {
+    flex: 1; /* Az első (bal oldali) rész a flex értékét hagyjuk 1-nek, tehát az egész szélességet elfoglalja. */
+}
+
+.section:nth-child(2) {
+    flex: 4; /* A második (jobb oldali) rész flex értéke 2, tehát kétszer akkora területet foglal el, mint az első rész. */
+}
+
+
+.container4 {
+    display: flex;
+    margin: 70 100px; /* Példaként a távolság az oldalsó margókból származik. */
+    height: 100px; /* Példaként állítsd be a konténer magasságát. */
+}
+.section3 {
+    background-color: lightgray; /* Példaként háttereszköz beállítása. */
+    padding: 120px; /* Példaként belső margó hozzáadása. */
+}
+
+.section:nth-child(3) {
+    flex: 4; /* Az első (bal oldali) rész a flex értékét hagyjuk 1-nek, tehát az egész szélességet elfoglalja. */
+}
+
+.section:nth-child(4) {
+    flex: 1; /* A második (jobb oldali) rész flex értéke 2, tehát kétszer akkora területet foglal el, mint az első rész. */
+}
+
+
+.rectangle {
+    width: 1000px;
+    height: 150px;
+    background-color: #3498db;
+   
+    top: 10%;
+    left: 50px;
+    transform: translate(+8%, +117%);
+}
+
+.cube {
+    width: 220px;
+    height: 220px;
+    background-color: #3498db;
+    
+    top: 50%;
+    left: 20%;
+    transform: translate(+560%, -00%); /* Az eltolás a kocka középre igazításához */
+}
+
+.cube img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Az objektum méretének a konténer méretéhez való illesztése */
+}
