@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import ReCAPTCHA from 'react-google-recaptcha';
+import Config from 'react-native-config';
 
 function SettingsScreen() {
   const [inputs, setInputs] = useState({
@@ -71,7 +72,7 @@ function SettingsScreen() {
 
       <ReCAPTCHA
         ref={recaptchaRef}
-        sitekey={process.env.REACT_APP_SITE_KEY}
+        sitekey={Config.REACT_APP_SITE_KEY}
         onVerify={onVerify}
         //style={styles.recaptcha} // Style the reCAPTCHA component as needed
       />
