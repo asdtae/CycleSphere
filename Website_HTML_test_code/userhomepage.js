@@ -1,5 +1,7 @@
 const contentDiv = document.getElementById('content');
 const infiniteTextParagraph = document.getElementById('infiniteText');
+let isScrolling = false;
+let isGeneratingContent = false;
 
 function generateMoreText() {
     const additionalText = " CycleSphere";
@@ -20,6 +22,13 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+
+
+document.addEventListener('wheel', slowScroll);
+
+checkBottomAndGenerateContent();
+checkBottomAndGenerateContent();
 // Initial text generation
 generateMoreText();
 

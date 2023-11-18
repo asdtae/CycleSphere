@@ -56,6 +56,7 @@ body {
 {
     height: 100000%; /* Vagy használhatod a height: 100%;-t is, ha a szülőelem is végtelen méretű */
     padding: 20px;
+    
     background-color: #ff9999; /* Háttérszín módosítása az igényeid szerint */
 }
 
@@ -64,5 +65,26 @@ body {
     padding: 20px;
     background-color: rgb(190, 124, 124); /* Háttérszín módosítása az igényeid szerint */
 }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.fixed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Árnyék a láthatóságért */
+}
+
+
+
+
 
 /* Bővítheted a stílust az igényeid szerint */
