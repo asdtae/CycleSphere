@@ -39,17 +39,17 @@ display: flex;
     .rectangle {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr; /* Itt változtathatod az oszlopok szélességét */
-        gap: 30px; /* Változtathatod a részecskék közötti rés méretét */
+        gap: 0px; /* Változtathatod a részecskék közötti rés méretét */
     }
     
     .part {
-        height: 300px; /* Változtasd a magasságot az igényeid szerint */
+        height: 700px; /* Változtasd a magasságot az igényeid szerint */
         text-align: center;
     }
     
     .part1 {
         background-color: #ff9999; /* Változtasd a színeket az igényeid szerint */
-        margin-left: +50px;
+        margin-left: +3px;
         }
     
     .part2 {
@@ -58,5 +58,5 @@ display: flex;
     
     .part3 {
         background-color: #9999ff;
-        margin-right: +50px
+        margin-right: +3px
     }
