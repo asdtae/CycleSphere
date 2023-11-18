@@ -5,5 +5,18 @@
     
     top: 50%;
     left: 20%;
-    transform: translate(+5%, -00%); /* Az eltolás a kocka középre igazításához */
+    transform: translate(+75%, -00%); /* Az eltolás a kocka középre igazításához */
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:   30px; /* Példaként cellák közötti tér hozzáadása. */
+}
+
+.section {
+    background-color: lightgray;
+    padding: 40px;
+}
+.empty-space {
+    height: 30px; }
