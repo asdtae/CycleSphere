@@ -14,3 +14,10 @@ body {
 .content {
     padding: 20px;
 }
+
+.container {
+    display: flex;
+   
+    margin:  200px; /* Példaként a távolság az oldalsó margókból származik. */
+    height:200px; /* Példaként állítsd be a konténer magasságát. */
+}
