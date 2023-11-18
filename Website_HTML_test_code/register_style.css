@@ -8,6 +8,14 @@
     transform: translate(+75%, -00%); /* Az eltolás a kocka középre igazításához */
 }
 
+.cube2{width: 100px;
+    height: 40px;
+    background-color: #3498db;
+    
+    top: 50%;
+    left: 20%;
+    transform: translate(+340%, -140%)}
+
 .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -20,3 +28,7 @@
 }
 .empty-space {
     height: 30px; }
+
+.input-email {
+    text-align: center;
+}
