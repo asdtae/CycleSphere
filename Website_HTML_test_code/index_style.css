@@ -103,13 +103,28 @@ p {
 .empty-space {
     height: 350px; }/* Kívánt üres terület magassága */
 
-.cube2 {width: 95%; height:120%; margin: 40 40px; background-color: #3498db }
 
-.empty-space2 {
-    height: 350px; }
+.rectangle2 {
+    width: 1400px;
+    height: 500px;
+    background-color: #3498db;
+    top: 50%;
+    left: 100px;
+    padding: 10px;
+    transform: translate(+3%, +0%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
     
 
 .text {
     color: white;
 }
+
+.spacer {
+    height: 1px; /* A margókhoz tartozó elválasztó sáv magassága */
+    width: 500%; /* A margókhoz tartozó elválasztó sáv teljes szélessége */
+    background-color: #fff; /* A sáv színe */}
