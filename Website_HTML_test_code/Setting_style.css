@@ -1,0 +1,10 @@
+.teglatest{width: 200px;
+    height: 205px;
+    background-color: #3498db;
+    align-items: center;
+    justify-content: center;
+    
+    top: 800%;
+    left: 20%;
+    transform: translate(+100%, -100%)}
+
