@@ -1,46 +1,62 @@
 <html>
     <head>
         <link rel="stylesheet" href="Setting_style.css">
+        <script>
+            function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+  
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+        </script>
     </head>
     <body>
-        <div class="container">
-            <div class="teglatest">
-                <div class="section">Switch Username</div>
+        <script src="Settings.js"></script>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Apperance')">Apperance</button>
+            <button class="tablinks" onclick="openCity(event, 'General')">General</button>
+            <button class="tablinks" onclick="openCity(event, 'Danger Zone')">Danger Zone</button>
+          </div>
 
-                <div class="section">Customization</div>
+          <div class="positioned-element">
+           
+        <div id="General" class="tabcontent">
+            <div class="kozepreIgazitottSzoveg">
+                <h3>General</h3>
+            </div>
+            <div class="section">Switch Username</div>
 
-                <div class="section">Apperance</div>
+            <div class="section">Bio</div>
 
+            <div class="section">Show Achievements on my profile</div>
+
+            <div class="section">Make profile private and hide activity</div>
+          </div></div>
+
+          <div id="Apperance" class="tabcontent">
+            <h3>Apperance</h3>
+            
+          </div>
+          
+          <div id="Danger Zone" class="tabcontent">
+            <h3>Danger Zone</h3>
                 <div class="section">Switch Email</div>
 
                 <div class="section">Switch Password</div>
-
-                <div class="section">Bio</div>
-
-                <div class="section"><text-align="left">Tell us a little bit about you</text></div>
-
-                <div class="section">Show Achievements on my profile</div>
-
-                <div class="section">Make profile private and hide activity</div>
-
-                <div class="section">Include private contributions on my profile</div>
-
-                <div class="section">Sounds and Vibration</div>
-
-                <div class="section"> </div>
-
-                <div class="section"> </div>
-
-                <div class="section"> </div>
-                
-                <div class="section"> </div>
-                
-                
-                
-                
-            </div>
-        </div>
-    
-    
+          </div>
     </body>
     </html>

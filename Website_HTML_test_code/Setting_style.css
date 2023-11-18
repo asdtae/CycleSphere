@@ -8,15 +8,36 @@ body {
     height: 100vh;
 }
 
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px 20px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+  
+
+.tab button.active {
+    background-color: #ccc;
+}
+
 .container {
     display: flex;
 }
 
-.teglatest {
-    width: 800px;
-    height: 600px;
-    background: repeating-linear-gradient(to bottom, #3498db 0px, #3498db 40px, transparent 40px, transparent 80px);
-}
+
 
 .section {
     height: 40px; /* Változtathatod az egyes részek magasságát az igényeid szerint */
@@ -25,4 +46,24 @@ body {
     justify-content: center;
     font-size: 16px; /* Változtathatod a szöveg méretét az igényeid szerint */
     color: #000000; /* Szöveg színének beállítása */
+}
+
+.tabcontent {
+    display: none;
+    padding: 12px 40px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  .kozepreIgazitottSzoveg {
+    text-align: center;
+}
+
+.positioned-element {
+    position: absolute;
+    top: 300px; /* Példaként a felső pozíció 100 pixel */
+    left: 700px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
 }

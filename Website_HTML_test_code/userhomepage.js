@@ -24,7 +24,6 @@ window.addEventListener('scroll', function() {
 
 
 
-
 document.addEventListener('wheel', slowScroll);
 
 checkBottomAndGenerateContent();
