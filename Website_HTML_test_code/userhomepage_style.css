@@ -19,7 +19,7 @@ body {
     display: flex;
    
     margin:  320px; /* Példaként a távolság az oldalsó margókból származik. */
-    height:200px; /* Példaként állítsd be a konténer magasságát. */
+    height:700px; /* Példaként állítsd be a konténer magasságát. */
 }
 
 .container2{
