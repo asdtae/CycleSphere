@@ -71,7 +71,7 @@ body {
 .positioned-element2 {
     position: absolute;
     top: 400px; /* Példaként a felső pozíció 100 pixel */
-    left: 190x; /* Példaként a bal pozíció 200 pixel */
+    left: 190px; /* Példaként a bal pozíció 200 pixel */
     background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
     padding: 10px;
     color: #ffffff;
