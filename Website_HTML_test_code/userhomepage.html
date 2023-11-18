@@ -30,11 +30,13 @@
             position: sticky;
             top: 0;
             z-index: 1;
+            padding: 54px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
         }
 
         .content {
             flex: 1;
-            padding: 20px;
+            padding: 30px;
             background-color: #ffffff;
             display: flex;
             flex-wrap: wrap;
@@ -51,14 +53,24 @@
 
         /* Egyenlő részekre osztás a bal oldalon */
         .fixed-sidebar p {
-            margin: 0;
             flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
         }
 
         /* Egyenlő részekre osztás a jobb oldalon */
+        .fixed-sidebar-right {
+            width: 200px;
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            padding: 40px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
         .fixed-sidebar-right p {
-            margin: 0;
-            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a bal oldalon */
+            margin: 6;
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
         }
     </style>
     <title>Fixed Sidebar Example</title>
@@ -67,12 +79,22 @@
 
     <div id="container">
         <div class="fixed-sidebar">
-            <p>Fixed Sidebar - Left</p>
-            <p>Fixed Sidebar - Left</p>
-            <p>Fixed Sidebar - Left</p>
-            <p>Fixed Sidebar - Left</p>
-            <p>Fixed Sidebar - Left</p>
-            <p>Fixed Sidebar - Left</p>
+
+            <href=""></href>
+            <p>Profile Name</p>
+            <p>Account Name</p>
+
+            <p>Home</p>
+
+            <p>Friends</p>
+
+            <p>Streak</p>
+
+            
+
+            <p>Settings</p>
+
+            <p>Log Out</p>
             <!-- További tartalom ... -->
         </div>
 
@@ -81,12 +103,8 @@
         </div>
 
         <div class="fixed-sidebar-right">
-            <p>Fixed Sidebar - Right</p>
-            <p>Fixed Sidebar - Right</p>
-            <p>Fixed Sidebar - Right</p>
-            <p>Fixed Sidebar - Right</p>
-            <p>Fixed Sidebar - Right</p>
-            <p>Fixed Sidebar - Right</p>
+            <p>Logo</p>
+            
             <!-- További tartalom ... -->
         </div>
     </div>
