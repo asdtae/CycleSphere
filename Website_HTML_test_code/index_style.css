@@ -128,3 +128,14 @@ p {
     height: 1px; /* A margókhoz tartozó elválasztó sáv magassága */
     width: 500%; /* A margókhoz tartozó elválasztó sáv teljes szélessége */
     background-color: #fff; /* A sáv színe */}
+
+    .container5 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap:   10px; /* Példaként cellák közötti tér hozzáadása. */
+    }
+    
+    .section5 {
+        background-color:#3498db;
+        padding: 120px;
+    }
