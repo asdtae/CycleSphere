@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { NavigationContainer, RouteProp } from '@react-navigation/native';
 import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomTabDescriptor } from '@react-navigation/bottom-tabs/lib/typescript/src/types';
+import SettingsScreen from './pages/register/Form'; 
 
 type RootTabParamList = {
   Home: undefined;
@@ -13,14 +14,6 @@ function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home!</Text>
-    </View>
-  );
-}
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
     </View>
   );
 }
