@@ -20,12 +20,11 @@
         .fixed-sidebar,
         .fixed-sidebar-right,
         .content {
-            height: 100vh;
+            height: 100%;
             overflow-y: auto;
         }
 
-        .fixed-sidebar,
-        .fixed-sidebar-right {
+        .fixed-sidebar {
             width: 200px;
             background-color: #f0f0f0;
             position: sticky;
@@ -40,6 +39,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
         }
 
         .infinite-text {
@@ -47,6 +47,18 @@
             overflow-wrap: break-word;
             word-wrap: break-word;
             width: 100%; /* Szélességet a teljes tartalomra állítjuk */
+        }
+
+        /* Egyenlő részekre osztás a bal oldalon */
+        .fixed-sidebar p {
+            margin: 0;
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        }
+
+        /* Egyenlő részekre osztás a jobb oldalon */
+        .fixed-sidebar-right p {
+            margin: 0;
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a bal oldalon */
         }
     </style>
     <title>Fixed Sidebar Example</title>
@@ -56,6 +68,11 @@
     <div id="container">
         <div class="fixed-sidebar">
             <p>Fixed Sidebar - Left</p>
+            <p>Fixed Sidebar - Left</p>
+            <p>Fixed Sidebar - Left</p>
+            <p>Fixed Sidebar - Left</p>
+            <p>Fixed Sidebar - Left</p>
+            <p>Fixed Sidebar - Left</p>
             <!-- További tartalom ... -->
         </div>
 
@@ -64,6 +81,11 @@
         </div>
 
         <div class="fixed-sidebar-right">
+            <p>Fixed Sidebar - Right</p>
+            <p>Fixed Sidebar - Right</p>
+            <p>Fixed Sidebar - Right</p>
+            <p>Fixed Sidebar - Right</p>
+            <p>Fixed Sidebar - Right</p>
             <p>Fixed Sidebar - Right</p>
             <!-- További tartalom ... -->
         </div>
