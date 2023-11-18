@@ -1,112 +1,152 @@
 <html>
-    <head>
-        <meta name="viewport" content "width=device-width, initial-scale=1.0">
-        <title>Green</title>
-        <link rel="stylesheet" href="index_style.css">
-    </head>
-    <body bgcolor="#ccff99">
-        <nav>
-            <a href="index.html"><img src="C:\Users\Patrik P\Downloads\logobg.png"></a>
-            <div class="nav-links">
-                <ul>
+<head>
+    <meta name="viewport" content "width=device-width, initial-scale=1.0">
+    <title>Green</title>
+    <link rel="stylesheet" href="index_style.css">
+</head>
+<body bgcolor="#ccff99">
+    <!-- Button to open the modal login form -->
+    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+              class="close" title="Close Modal">&times;</span>
+
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <nav>
+        <a href="index.html"><img src="photos/logobg.png"></a>
+        <div class="nav-links">
+            <ul>
                 <li><a>HOME</a></li>
                 <li><a>LOGIN</a></li>
                 <li><a>DOWNLOAD</a></li>
                 <li><a>REPORT ERRORS</a></li>
-                </ul>
-            </div>
-            
-        </nav>
-        <h1>Welcome to CycleSphere</h1>
-        <p><i><br>"Playfully Recycling for a Positive World: Earn Points, Make a Difference!"</i><br><br><p>
+            </ul>
+        </div>
+
+    </nav>
+    <h1>Welcome to CycleSphere</h1>
+    <p><i><br>"Playfully Recycling for a Positive World: Earn Points, Make a Difference!"</i><br><br><p>
         <div class="container">
-        <p>The project aims to make recycling more enjoyable. The programme offers tasks to earn points that can be redeemed at specific locations. This could be, for example, throwing your rubbish in the right place. In summary, we want to get people to recycle in a fun and playful way.</p>
+            <p>The project aims to make recycling more enjoyable. The programme offers tasks to earn points that can be redeemed at specific locations. This could be, for example, throwing your rubbish in the right place. In summary, we want to get people to recycle in a fun and playful way.</p>
         </div>
-    <h1><br><br><br>What are our goals?</h1>
-     <div class="container3">
-        <label>
-            <input type="checkbox" />
-            <div class="flip-card">
-                <div class="front">
-                <h2>Recycling</h2>
-                <p>Click to Flip</p>
-                </div>
-                <div class="back">
-                <hr>
-               <p>Our aim is to achieve sustainability 
-                through recycling, avoiding further damage
-                 to our environment by unnecessarily purchasing materials. 
-               </p>
-               </hr>
-               </div>
-            </div>
-           </label>
-     <!-- Tartalom az elso részben -->
+        <h1><br><br><br>What are our goals?</h1>
+        <div class="container3">
             <label>
-            <input type="checkbox" />
-            <div class="flip-card">
-                <div class="front">
-                <h2>Clean environment</h2>
-                <p>Click to Flip</p>
-                </div>
-                <div class="back">
-                <hr>
-               <p>By keeping the environment clean
-                 we aim to protect our environment
-                  and our own lives.As a result, we will 
-                  have healthier bodies and happier lives</p>
-               </hr>
-               </div>
-            </div>
-           </label>
-               <!-- Tartalom a második részben -->
-               <label>
                 <input type="checkbox" />
                 <div class="flip-card">
                     <div class="front">
-                    <h2>Preserving our wildlife</h2>
-                    <p>Click to Flip</p>
+                        <h2>Recycling</h2>
+                        <p>Click to Flip</p>
                     </div>
                     <div class="back">
-                    <hr>
-                   <p>Sadly, pollution harms animals and plants. However, proper waste management  could save lives.</p>
-                   </hr>
-                   </div>
+                        <hr>
+                        <p>
+                            Our aim is to achieve sustainability
+                            through recycling, avoiding further damage
+                            to our environment by unnecessarily purchasing materials.
+                        </p>
+                        </hr>
+                    </div>
                 </div>
-               </label>
-               <label>
+            </label>
+            <!-- Tartalom az elso részben -->
+            <label>
                 <input type="checkbox" />
                 <div class="flip-card">
                     <div class="front">
-                    <h2>Building the future</h2>
-                    <p>Click to Flip</p>
+                        <h2>Clean environment</h2>
+                        <p>Click to Flip</p>
                     </div>
                     <div class="back">
-                    <hr>
-                   <p>The time is now to make 
-                     a difference so that future generations - and ourselves - 
-                     can live in a purer and more fulfilling environment</p>
-                   </hr>
-                   </div>
+                        <hr>
+                        <p>
+                            By keeping the environment clean
+                            we aim to protect our environment
+                            and our own lives.As a result, we will
+                            have healthier bodies and happier lives
+                        </p>
+                        </hr>
+                    </div>
                 </div>
-               </label>
-            </div>
+            </label>
+            <!-- Tartalom a második részben -->
+            <label>
+                <input type="checkbox" />
+                <div class="flip-card">
+                    <div class="front">
+                        <h2>Preserving our wildlife</h2>
+                        <p>Click to Flip</p>
+                    </div>
+                    <div class="back">
+                        <hr>
+                        <p>Sadly, pollution harms animals and plants. However, proper waste management  could save lives.</p>
+                        </hr>
+                    </div>
+                </div>
+            </label>
+            <label>
+                <input type="checkbox" />
+                <div class="flip-card">
+                    <div class="front">
+                        <h2>Building the future</h2>
+                        <p>Click to Flip</p>
+                    </div>
+                    <div class="back">
+                        <hr>
+                        <p>
+                            The time is now to make
+                            a difference so that future generations - and ourselves -
+                            can live in a purer and more fulfilling environment
+                        </p>
+                        </hr>
+                    </div>
+                </div>
+            </label>
         </div>
-    </div>
-        
+        </div>
+        </div>
+
         <div class="container4">
-                <p>  <br><br><br> "I appreciate the way the app educates 
-                    users on the importance of recycling and provides 
-                    valuable tips on reducing waste.<br>It has truly 
-                    heightened my awareness of environmental issues"<br><i>John Smith- a happy user</i></p>
-            </div>
+            <p>
+                <br><br><br> "I appreciate the way the app educates
+                users on the importance of recycling and provides
+                valuable tips on reducing waste.<br>It has truly
+                heightened my awareness of environmental issues"<br><i>John Smith- a happy user</i>
+            </p>
+        </div>
         </div>
 
         <div class="rectangle">
-        <p><u>Why you should sign up</u><br><br>You have the opportunity to learn more about the environment while also combatting pollution and earning points for completing tasks</p>
+            <p><u>Why you should sign up</u><br><br>You have the opportunity to learn more about the environment while also combatting pollution and earning points for completing tasks</p>
         </div>
         <div>
-        <p><br><br><br></p>
+            <p><br><br><br></p>
         </div>
-    </body>
+</body>
 </html>
