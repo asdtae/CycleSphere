@@ -7,7 +7,7 @@
     
     top: 800%;
     left: 20%;
-    transform: translate(+330%, -140%)}
+    transform: translate(+280%, -240%)}
 
 
     .container {
@@ -34,9 +34,9 @@
 
 .input-email {
     text-align: center;
-    width: 500px; /* Set the desired width */
+    width: 400px; /* Set the desired width */
         height: 40px; /* Set the desired height */
-        transform: translate(+13%, -43%)
+        transform: translate(+40%, -43%)
 }
 
 .cube3{width: 200px;
@@ -47,4 +47,11 @@
     
     top: 800%;
     left: 20%;
-    transform: translate(+575%, -140%)}
+    transform: translate(+525%, -140%)}
+
+    .circle {
+        width: 100px;
+        height: 100px;
+        background-color: blue; /* Helyettesítsd a saját színeddel */
+        border-radius: 50% 
+        transform: translate(+525%, -140%)}
