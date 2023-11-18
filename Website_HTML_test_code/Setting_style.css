@@ -59,10 +59,28 @@ body {
     text-align: center;
 }
 
-.positioned-element {
+.positioned-element1 {
     position: absolute;
-    top: 300px; /* Példaként a felső pozíció 100 pixel */
-    left: 700px; /* Példaként a bal pozíció 200 pixel */
+    top: 400px; /* Példaként a felső pozíció 100 pixel */
+    left: 590x; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
+
+.positioned-element2 {
+    position: absolute;
+    top: 400px; /* Példaként a felső pozíció 100 pixel */
+    left: 190x; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
+
+.positioned-element3 {
+    position: absolute;
+    top: 400px; /* Példaként a felső pozíció 100 pixel */
+    left: 1200px; /* Példaként a bal pozíció 200 pixel */
     background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
     padding: 10px;
     color: #ffffff;
