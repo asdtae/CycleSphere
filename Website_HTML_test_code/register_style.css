@@ -7,7 +7,7 @@
     
     top: 800%;
     left: 20%;
-    transform: translate(+450%, -140%)}
+    transform: translate(+330%, -140%)}
 
 
     .container {
@@ -21,14 +21,9 @@
     }
 
     .container2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 5vh; /* A négyzet középre igazításához az egész ablakmagasságot (viewport height) használjuk */
-    }
-    p {
-        text-align: center; /* A szöveget igazítja a bal és jobb oldali margóhoz. */
-    }
+        padding: 1px;}
+  
+        
 
 .section {
     background-color: lightgray;
@@ -43,3 +38,13 @@
         height: 40px; /* Set the desired height */
         transform: translate(+13%, -43%)
 }
+
+.cube3{width: 200px;
+    height: 205px;
+    background-color: #3498db;
+    align-items: center;
+    justify-content: center;
+    
+    top: 800%;
+    left: 20%;
+    transform: translate(+575%, -140%)}
