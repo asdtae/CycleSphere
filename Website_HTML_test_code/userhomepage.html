@@ -20,26 +20,28 @@
         .fixed-sidebar,
         .fixed-sidebar-right,
         .content {
-            height: 100vh;
+            height: 100%;
             overflow-y: auto;
         }
 
-        .fixed-sidebar,
-        .fixed-sidebar-right {
+        .fixed-sidebar {
             width: 200px;
             background-color: #f0f0f0;
             position: sticky;
             top: 0;
             z-index: 1;
+            padding: 54px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
         }
 
         .content {
             flex: 1;
-            padding: 20px;
+            padding: 30px;
             background-color: #ffffff;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
         }
 
         .infinite-text {
@@ -48,6 +50,28 @@
             word-wrap: break-word;
             width: 100%; /* Szélességet a teljes tartalomra állítjuk */
         }
+
+        /* Egyenlő részekre osztás a bal oldalon */
+        .fixed-sidebar p {
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        }
+
+        /* Egyenlő részekre osztás a jobb oldalon */
+        .fixed-sidebar-right {
+            width: 200px;
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            padding: 70px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
+        .fixed-sidebar-right p {
+            margin: 6;
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        }
     </style>
     <title>Fixed Sidebar Example</title>
 </head>
@@ -55,7 +79,25 @@
 
     <div id="container">
         <div class="fixed-sidebar">
-            <p>Fixed Sidebar - Left</p>
+
+            <href=""></href>
+            <p>Username</p>
+         
+            <p>Email</p>
+
+            <tab>Home</p>
+
+            <p>Friends</p>
+             
+            <p>Streak</p>
+
+            
+
+            <a href="https://www.pelda.com">Settings</a>
+            <p> </p>
+
+            <a href="https://www.pelda.com">Log out</a>
+
             <!-- További tartalom ... -->
         </div>
 
@@ -64,7 +106,8 @@
         </div>
 
         <div class="fixed-sidebar-right">
-            <p>Fixed Sidebar - Right</p>
+            <p>Logo</p>
+            
             <!-- További tartalom ... -->
         </div>
     </div>
