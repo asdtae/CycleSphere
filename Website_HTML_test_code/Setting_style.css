@@ -14,7 +14,7 @@ body {
 
 .teglatest {
     width: 800px;
-    height: 1000px;
+    height: 600px;
     background: repeating-linear-gradient(to bottom, #3498db 0px, #3498db 40px, transparent 40px, transparent 80px);
 }
 
@@ -24,5 +24,5 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 16px; /* Változtathatod a szöveg méretét az igényeid szerint */
-    color: #fff; /* Szöveg színének beállítása */
+    color: #000000; /* Szöveg színének beállítása */
 }
