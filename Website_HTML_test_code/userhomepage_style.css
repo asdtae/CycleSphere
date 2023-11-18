@@ -1,9 +1,16 @@
-.empty-space {
-    height: 30px; }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-    .container {
-        width: 35%; /* Példaként 80%-os szélességű konténer. Az értéket az igényeidhez igazíthatod. */
-        margin: 20 auto; /* Automatikus középre igazítás a maradék terület elosztásával. */
-        padding: 200px; /* Példaként 20 pixeles belső margó a tartalom körül. */
-        background-color: #f0f0f0; /* Háttérszín a tartalom körül. */
-    }
+.header {
+    background-color: #4267B2; /* Facebook's header color */
+    color: #fff;
+    padding: 20px;
+    transition: height 0.5s ease; /* Adding a smooth transition effect for height changes */
+}
+
+.content {
+    padding: 20px;
+}
