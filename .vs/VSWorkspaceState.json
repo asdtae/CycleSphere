@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\expo",
-    "\\expo\\cyclesphere"
+    "\\expo\\cyclesphere",
+    "\\expo\\cyclesphere\\pages",
+    "\\expo\\cyclesphere\\pages\\register",
+    "\\Website_HTML_test_code"
   ],
-  "SelectedNode": "\\expo\\cyclesphere\\App.tsx",
+  "SelectedNode": "\\Website_HTML_test_code\\index_style.css",
   "PreviewInSolutionExplorer": false
 }

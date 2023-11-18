@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Image,
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as SecureStore from 'expo-secure-store';
-import zxcvbn from 'zxcvbn'; // For password strength checking
+
 
 function RegisterScreen() {
   const [inputs, setInputs] = useState({
@@ -13,7 +13,7 @@ function RegisterScreen() {
     confirmPassword: '',
   });
 
-  const [profilePic, setProfilePic] = useState<string | null>(null);
+  const [profilePic, setProfilePic] = useState(null);
 
   const handleInputChange = (key: any, value: any) => {
     setInputs({
@@ -23,20 +23,8 @@ function RegisterScreen() {
   };
 
   const handleProfilePicUpload = async () => {
-    try {
-      const result = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: ImagePicker.MediaTypeOptions.Images,
-        allowsEditing: true,
-        aspect: [4, 3],
-        quality: 1,
-      });
-
-      if (!result.canceled) {
-        setProfilePic(result);
-      }
-    } catch (error) {
-      console.error('Error selecting image:', error);
-    }
+    // Implement image uploading logic using ImagePicker
+    // Set the selected image to 'profilePic'
   };
 
   const handleSubmit = () => {
@@ -45,17 +33,6 @@ function RegisterScreen() {
       return;
     }
 
-    // Check password strength using zxcvbn library
-    const passwordStrength = zxcvbn(inputs.password);
-    if (passwordStrength.score < 3) {
-      alert(
-        'Please create a stronger password. Include numbers, special characters, and both uppercase and lowercase letters.'
-      );
-      return;
-    }
-
-    // Save user data and profile picture to database or storage
-    // Redirect to the home screen or perform further actions
   };
 
   return (
@@ -63,11 +40,7 @@ function RegisterScreen() {
       <View style={styles.formContainer}>
         {/* Profile picture upload */}
         <TouchableOpacity style={styles.profilePicButton} onPress={handleProfilePicUpload}>
-          {!profilePic ? (
-            <Text style={styles.profilePicButtonText}>Select Profile Picture</Text>
-            ) : (
-            <Image source={{ uri: profilePic }} style={styles.profilePic} />
-          )}
+          <Text style={styles.profilePicButtonText}>Upload Profile Picture</Text>
         </TouchableOpacity>
         {profilePic && <Image source={{ uri: profilePic }} style={styles.profilePic} />}
 
@@ -79,15 +52,6 @@ function RegisterScreen() {
           placeholder="Enter username"
         />
 
-      <Text style={styles.label}>Email</Text>
-      <TextInput
-        style={styles.input}
-        value={inputs.email}
-        onChangeText={(text) => handleInputChange('email', text)}
-        placeholder="Enter email"
-        keyboardType="email-address"
-      />
-
       <Text style={styles.label}>Password</Text>
       <TextInput
         style={styles.input}
@@ -97,16 +61,7 @@ function RegisterScreen() {
         secureTextEntry
       />
 
-      <Text style={styles.label}>Confirm Password</Text>
-      <TextInput
-        style={styles.input}
-        value={inputs.confirmPassword}
-        onChangeText={(text) => handleInputChange('confirmPassword', text)}
-        placeholder="Confirm password"
-        secureTextEntry
-      />
-        
-        <Button title="Register" onPress={handleSubmit} />
+        <Button title="Login" onPress={handleSubmit} />
       </View>
     </View>
   );
