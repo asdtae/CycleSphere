@@ -5,9 +5,11 @@ import { BottomTabNavigationProp, createBottomTabNavigator } from '@react-naviga
 import { BottomTabDescriptor } from '@react-navigation/bottom-tabs/lib/typescript/src/types';
 import SettingsScreen from './pages/register/Form'; 
 import LoginScreen from './pages/login/Form';
+import Home2Screen from './pages/main/Form'
 
 type RootTabParamList = {
   Home: undefined;
+  Home2: undefined;
   Login: undefined;
   Register: undefined;
 };
@@ -77,6 +79,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
         <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Home2" component={Home2Screen}/>
         <Tab.Screen name="Login" component={LoginScreen} />
         <Tab.Screen name="Register" component={SettingsScreen} />
       </Tab.Navigator>
