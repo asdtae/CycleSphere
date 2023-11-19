@@ -25,22 +25,19 @@
         }
 
         .circle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap; /* Módosítottuk a wrap értékét nowrap-ra */
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-.circle {
-    width: 100px;
-    height: 100px;
-    background-color: #000000;
-    border-radius: 50%;
-    margin: 10px;
-    position: absolute;
-    left: 50%; /* A kör középpontja a tartalom rész közepén */
-    transform: translateX(-25%); /* A kör vízszintes középre igazítása */
-}
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 10px;
+        }
 
         .fixed-sidebar {
             width: 200px;
@@ -109,7 +106,6 @@
              
             <p>Streak</p>
 
-           
             
 
             <a href="https://www.pelda.com">Settings</a>
@@ -147,7 +143,13 @@
             flex-wrap: wrap;
         }
 
-        
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 10px;
+        }
 
     </style>
     <title>Fixed Sidebar Example</title>
@@ -167,8 +169,8 @@
             <!-- ... (az eredeti tartalom marad változatlan) ... -->
         </div>
     </div>
-   
-    <<script>
+
+    <script>
         const circleContainer = document.getElementById('circleContainer');
         let isScrolling = false;
 
@@ -180,5 +182,19 @@
         }
 
         window.addEventListener('scroll', function() {
+            isScrolling = !isScrolling;
+
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight && isScrolling) {
+                generateCircle();
+            }
+        });
+
+        window.addEventListener('wheel', function(event) {
+            if (event.deltaY > 0) {
+                generateCircle();
+            }
+        });
+    </script>
+
 </body>
 </html>
