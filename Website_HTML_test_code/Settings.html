@@ -4,65 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
-        .tabs {
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            }
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Most középre igazítjuk a gombokat */
+            margin-top: 20px;    /* Opcionális: helyezd el a gombokat egy kis távolságra a felső széltől */
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            width: 150px;
+            text-align: left;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .field {
+            margin-left: 20px;
+        }
     </style>
-    <title>Settings</title>
+    <title>Buttons</title>
 </head>
 <body>
-    <div class="container">
-        <div class="tabs">
-            <button class="tablinks" onclick="openCity(event, 'Apperance')">Apperance</button>
-            <button class="tablinks" onclick="openCity(event, 'General')">General</button>
-            <button class="tablinks" onclick="openCity(event, 'Danger Zone')">Danger Zone</button>
-        </div>
-
-        <div class="positioned-element1">
-            <div id="Apperance" class="tabcontent">
-                <h3>Apperance</h3>
-                <div class="section">Apperance</div>
-            </div>
-        </div>
-
-        <div class="positioned-element2">
-            <div id="General" class="tabcontent">
-                <div class="kozepreIgazitottSzoveg">
-                    <h3>General</h3>
-                </div>
-                <div class="section">Switch Username</div>
-                <div class="section">Bio</div>
-                <div class="section">Show Achievements on my profile</div>
-                <div class="section">Make profile private and hide activity</div>
-            </div>
-        </div>
-
-        <div class="positioned-element3">
-            <div id="Danger Zone" class="tabcontent">
-                <h3>Danger Zone</h3>
-                <div class="section">Switch Email</div>
-                <div class="section">Switch Password</div>
-            </div>
-        </div>
+    <div class="button-container">
+        <button class="button" onclick="showField('Apperance')">Apprentice</button>
+        <button class="button" onclick="showField('General')">General</button>
+        <button class="button" onclick="showField('DangerZone')">Danger Zone</button>
     </div>
+
+    <div id="Apperance" class="field" style="display:none;">
+        <p>Apperance</p>
+    </div>
+
+    <div id="General" class="field" style="display:none;">
+        <p>Switch Username</p>
+        <p>Bio</p>
+        <p>Show Achievements on my profile</p>
+        <p>Make profile private and hide activity</p>
+    </div>
+
+    <div id="DangerZone" class="field" style="display:none;">
+        <p>Switch Email</p>
+        <p>Switch Password</p>
+    </div>
+
     <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
+        function showField(fieldId) {
+            // Elrejtjük az összes mezőt
+            document.getElementById('Apperance').style.display = 'none';
+            document.getElementById('General').style.display = 'none';
+            document.getElementById('DangerZone').style.display = 'none';
 
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
+            // Megjelenítjük a kiválasztott mezőt
+            document.getElementById(fieldId).style.display = 'block';
         }
     </script>
 </body>
