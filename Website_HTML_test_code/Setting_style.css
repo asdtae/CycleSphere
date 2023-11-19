@@ -1,87 +1,54 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+.container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    flex-direction: column;
+    padding: 400px;
+    align-items: flex-start;
 }
 
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .tab button {
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 20px 20px;
+    height: 60px;
+    padding: 20px;
     transition: 0.3s;
-}
-
-.tab button:hover {
-    background-color: #ddd;
-}
-  
-
-.tab button.active {
-    background-color: #ccc;
-}
-
-.container {
-    display: flex;
-}
-
-
-
-.section {
-    height: 40px; /* Változtathatod az egyes részek magasságát az igényeid szerint */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px; /* Változtathatod a szöveg méretét az igényeid szerint */
-    color: #000000; /* Szöveg színének beállítása */
-}
-
-.tabcontent {
-    display: none;
-    padding: 12px 40px;
-    border: 1px solid #ccc;
-    border-top: none;
-  }
-
-  .kozepreIgazitottSzoveg {
-    text-align: center;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 10px; /* Hozzáadott sor - térköz a gombok között */
 }
 
 .positioned-element1 {
     position: absolute;
-    top: 400px; /* Példaként a felső pozíció 100 pixel */
-    left: 590x; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    top: 300px;
+    left: 500px;
+    background-color: #3498db;
     padding: 10px;
     color: #ffffff;
 }
 
 .positioned-element2 {
     position: absolute;
-    top: 400px; /* Példaként a felső pozíció 100 pixel */
-    left: 190px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    top: 300px;
+    left: 500px;
+    background-color: #3498db;
     padding: 10px;
     color: #ffffff;
 }
 
-.positioned-element3 {
-    position: absolute;
-    top: 400px; /* Példaként a felső pozíció 100 pixel */
-    left: 1200px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
-    padding: 10px;
-    color: #ffffff;
-}
+        .positioned-element3 {
+            position: absolute;
+            top: 550px;
+            left: 500px;
+            background-color: #3498db;
+            padding: 10px;
+            color: #ffffff;
+        }

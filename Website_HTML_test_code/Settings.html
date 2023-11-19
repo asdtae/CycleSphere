@@ -3,121 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Setting_style.css">
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             display: flex;
-            height: 100vh;
+            flex-direction: column;
+            align-items: flex-start; /* Gombok balra igazítása */
+            height: 100vh; /* Ablak teljes magasságúra állítása */
+            /* Gombok középre igazítása fentről és lentről nézve */
         }
 
-        .tabs {
+        .button-container {
             display: flex;
             flex-direction: column;
-            border: 6px solid #ccc;
-            background-color: #f1f1f1;
-        }
+            align-items: flex-start; /* Gombok balra igazítása */
+            margin-left:100px; /* Kis távolság a bal széltől */
+        margin-top: 100px;}
 
-        .tab button {
-            background-color: inherit;
+        .button {
+            background-color: #3498db;
+            color: #ffffff;
             border: none;
-            outline: none;
+            padding: 10px;
+            margin-bottom: 10px;
             cursor: pointer;
-            padding: 40px 40px;
-            transition: 0.3s;
+            width: 150px;
             text-align: left;
         }
 
-        .tab button:hover {
-            background-color: #ddd;
+        .button:hover {
+            background-color: #2980b9;
         }
 
-        .tab button.active {
-            background-color: #ccc;
+        .field {
+            margin-left: 20px;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            padding: 400px;
-        }
+        .positioned-element1 {
+    position: absolute;
+    top: 100px; /* Példaként a felső pozíció 100 pixel */
+    left: 600px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
 
-        .section {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: #000000;
-        }
+.positioned-element2 {
+    position: absolute;
+    top: 205px; /* Példaként a felső pozíció 100 pixel */
+    left: 600px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
 
-        .tabcontent {
-            display: none;
-            padding: 12px 40px;
-            border: 1px solid #ccc;
-            border-top: none;
-        }
-
-        .kozepreIgazitottSzoveg {
-            text-align: center;
-        }
-
-        .positioned-element {
-            background-color: #3498db;
-            padding: 10px;
-            color: #ffffff;
-        }
+.positioned-element3 {
+    position: absolute;
+    top: 490px; /* Példaként a felső pozíció 100 pixel */
+    left: 600px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
     </style>
-    <title>Settings</title>
+    <title>Buttons</title>
 </head>
 <body>
-    <div class="tabs">
-        <button class="tablinks" onclick="openCity(event, 'Apperance')">Apperance</button>
-        <button class="tablinks" onclick="openCity(event, 'General')">General</button>
-        <button class="tablinks" onclick="openCity(event, 'Danger Zone')">Danger Zone</button>
+    <div class="button-container">
+        <button class="button" onclick="showField('Apperance')">Apprentice</button>
+        <button class="button" onclick="showField('General')">General</button>
+        <button class="button" onclick="showField('DangerZone')">Danger Zone</button>
     </div>
+    <div class="positioned-element1">
+    <div id="Apperance" class="field" style="display:none;">
+        <p>Apperance</p>
+    </div></div>
 
-    <div class="container">
-        <div id="Apperance" class="tabcontent">
-            <h3>Apperance</h3>
-            <div class="section">Apperance</div>
-        </div>
+    <div class="positioned-element2">
+    <div id="General" class="field" style="display:none;">
+        <p>Switch Username</p>
+        <p>Bio</p>
+        <p>Show Achievements on my profile</p>
+        <p>Make profile private and hide activity</p>
+    </div></div>
 
-        <div id="General" class="tabcontent">
-            <div class="kozepreIgazitottSzoveg">
-                <h3>General</h3>
-            </div>
-            <div class="section">Switch Username</div>
-            <div class="section">Bio</div>
-            <div class="section">Show Achievements on my profile</div>
-            <div class="section">Make profile private and hide activity</div>
-        </div>
-
-        <div id="Danger Zone" class="tabcontent">
-            <h3>Danger Zone</h3>
-            <div class="section">Switch Email</div>
-            <div class="section">Switch Password</div>
-        </div>
-    </div>
+    <div class="positioned-element3">
+    <div id="DangerZone" class="field" style="display:none;">
+        <p>Switch Email</p>
+        <p>Switch Password</p>
+    </div></div>
 
     <script>
-        function openCity(evt, cityName) {
-            var i, tabcontent, tablinks;
+        function showField(fieldId) {
+            // Elrejtjük az összes mezőt
+            document.getElementById('Apperance').style.display = 'none';
+            document.getElementById('General').style.display = 'none';
+            document.getElementById('DangerZone').style.display = 'none';
 
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
+            // Megjelenítjük a kiválasztott mezőt
+            document.getElementById(fieldId).style.display = 'block';
         }
     </script>
 </body>
