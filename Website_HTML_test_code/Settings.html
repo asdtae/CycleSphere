@@ -22,12 +22,14 @@
 
         .tab button {
     background-color: inherit;
-  
+    border: none;
+    outline: none;
     cursor: pointer;
-    padding: 60px; /* Módosítsd az értéket a kívánt méretre */
+    padding: 60px 70px; /* Módosítsd az értékeket a kívánt méretre */
     transition: 0.3s;
-    width: 200px; /* Módosítsd az értéket a kívánt méretre */
-    height: 300px; /* Módosítsd az értéket a kívánt méretre */
+    width: 200%; /* A szélesség 100%-ra állítása a tartalomnak megfelelően */
+    height: 100px; /* Módosítsd az értéket a kívánt méretre */
+}
 }
 
         .tab button:hover {
@@ -96,38 +98,40 @@
     <title>Settings</title>
 </head>
 <body>
-    <div class="tabs">
-        <button class="tablinks" onclick="openCity(event, 'Apperance')">Apperance</button>
-        <button class="tablinks" onclick="openCity(event, 'General')">General</button>
-        <button class="tablinks" onclick="openCity(event, 'Danger Zone')">Danger Zone</button>
-    </div>
-
     <div class="container">
+        <div class="tabs">
+            <button class="tablinks" onclick="openCity(event, 'Apperance')">Apperance</button>
+            <button class="tablinks" onclick="openCity(event, 'General')">General</button>
+            <button class="tablinks" onclick="openCity(event, 'Danger Zone')">Danger Zone</button>
+        </div>
+
         <div class="positioned-element1">
-        <div id="Apperance" class="tabcontent">
-            <h3>Apperance</h3>
-            <div class="section">Apperance</div>
-        </div></div>
+            <div id="Apperance" class="tabcontent">
+                <h3>Apperance</h3>
+                <div class="section">Apperance</div>
+            </div>
+        </div>
 
         <div class="positioned-element2">
-        <div id="General" class="tabcontent">
-            <div class="kozepreIgazitottSzoveg">
-                <h3>General</h3>
+            <div id="General" class="tabcontent">
+                <div class="kozepreIgazitottSzoveg">
+                    <h3>General</h3>
+                </div>
+                <div class="section">Switch Username</div>
+                <div class="section">Bio</div>
+                <div class="section">Show Achievements on my profile</div>
+                <div class="section">Make profile private and hide activity</div>
             </div>
-            <div class="section">Switch Username</div>
-            <div class="section">Bio</div>
-            <div class="section">Show Achievements on my profile</div>
-            <div class="section">Make profile private and hide activity</div>
-        </div></div>
+        </div>
 
         <div class="positioned-element3">
-        <div id="Danger Zone" class="tabcontent">
-            <h3>Danger Zone</h3>
-            <div class="section">Switch Email</div>
-            <div class="section">Switch Password</div>
-        </div></div>
+            <div id="Danger Zone" class="tabcontent">
+                <h3>Danger Zone</h3>
+                <div class="section">Switch Email</div>
+                <div class="section">Switch Password</div>
+            </div>
+        </div>
     </div>
-
     <script>
         function openCity(evt, cityName) {
             var i, tabcontent, tablinks;
