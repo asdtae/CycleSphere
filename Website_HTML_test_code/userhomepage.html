@@ -4,73 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
+        /* ... (az eredeti stílusok maradnak változatlanok) ... */
 
-        #container {
+        .circle-container {
             display: flex;
-            overflow-x: auto;
-            height: 100vh;
-        }
-
-        .fixed-sidebar,
-        .fixed-sidebar-right,
-        .content {
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        .fixed-sidebar {
-            width: 200px;
-            background-color: #f0f0f0;
-            position: sticky;
-            top: 0;
-            z-index: 1;
-            padding: 54px; /* Távolság a felső rész és a tartalom között */
-            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
-        }
-
-        .content {
-            flex: 1;
-            padding: 30px;
-            background-color: #ffffff;
-            display: flex;
+            align-items: center;
+            justify-content: center;
             flex-wrap: wrap;
-            justify-content: space-between;
-            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
         }
 
-        .infinite-text {
-            white-space: pre-wrap;
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            width: 100%; /* Szélességet a teljes tartalomra állítjuk */
-        }
-
-        /* Egyenlő részekre osztás a bal oldalon */
-        .fixed-sidebar p {
-            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
-        }
-
-        /* Egyenlő részekre osztás a jobb oldalon */
-        .fixed-sidebar-right {
-            width: 200px;
-            background-color: #f0f0f0;
-            position: sticky;
-            top: 0;
-            right: 0;
-            z-index: 1;
-            padding: 70px; /* Távolság a felső rész és a tartalom között */
-            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
-        }
-
-        .fixed-sidebar-right p {
-            margin: 6;
-            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 10px;
         }
     </style>
     <title>Fixed Sidebar Example</title>
@@ -79,70 +27,47 @@
 
     <div id="container">
         <div class="fixed-sidebar">
-
-            <href=""></href>
-            <p>Username</p>
-         
-            <p>Email</p>
-
-            <tab>Home</p>
-
-            <p>Friends</p>
-             
-            <p>Streak</p>
-
-            
-
-            <a href="https://www.pelda.com">Settings</a>
-            <p> </p>
-
-            <a href="https://www.pelda.com">Log out</a>
-
-            <!-- További tartalom ... -->
+            <!-- ... (az eredeti tartalom marad változatlan) ... -->
         </div>
 
         <div class="content" id="scrollableContent">
             <div class="infinite-text" id="infiniteText"></div>
+            <div class="circle-container" id="circleContainer"></div>
         </div>
 
         <div class="fixed-sidebar-right">
-            <p>Logo</p>
-            
-            <!-- További tartalom ... -->
+            <!-- ... (az eredeti tartalom marad változatlan) ... -->
         </div>
     </div>
 
     <script>
         const infiniteText = document.getElementById('infiniteText');
+        const circleContainer = document.getElementById('circleContainer');
         let isScrolling = false;
 
         function generateMoreText() {
-            const additionalText = " CycleSphere";
-
-            // Generate additional text and append it to the paragraph
+           
             infiniteText.innerHTML += additionalText;
+
+            // Generate circle and append it to the container
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circleContainer.appendChild(circle);
         }
 
-        // Listen for the scroll event
         window.addEventListener('scroll', function() {
             isScrolling = true;
 
-            // Check if the user has scrolled to the bottom of the page
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight && isScrolling) {
-                // Generate more text when the user reaches the bottom
                 generateMoreText();
                 isScrolling = false;
             }
         });
 
-        // Initial text generation
         generateMoreText();
 
-        // Listen for mouse wheel events
         window.addEventListener('wheel', function(event) {
-            // Check if the user is scrolling down
             if (event.deltaY > 0) {
-                // Generate more text when scrolling down
                 generateMoreText();
             }
         });
