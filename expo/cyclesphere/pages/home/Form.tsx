@@ -1,9 +1,22 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Image,
+import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Image, Linking,
 } from 'react-native';
+import ExternalLink0 from './ExternalLink0';
+import ExternalLink1 from './ExternalLink1';
+import ExternalLink2 from './ExternalLink2';
+import ExternalLink3 from './ExternalLink3';
+import ExternalLink4 from './ExternalLink4';
+import ExternalLink5 from './ExternalLink5';
 
 
 function RegisterScreen() {
+  const externalUrl0 = 'https://www.example.com'
+  const externalUrl1 = 'https://www.example.com'
+  const externalUrl2 = 'https://www.example.com'
+  const externalUrl3 = 'https://www.example.com'
+  const externalUrl4 = 'https://www.example.com'
+  const externalUrl5 = 'https://www.example.com'
+  
     return (
       <View style={styles.container}>
         {/* Header */}
@@ -12,22 +25,25 @@ function RegisterScreen() {
           <View style={styles.leftHeader}>
             {/* Logo */}
             <Image
-            source={require('../../assets/icon.png')} // Replace with your logo path
+            source={require('../../assets/icon.png')} 
             style={styles.logo}
             />
             {/* Website Name */}
-            <Text style={styles.websiteName}>CycleSphere</Text>
+            
+            <TouchableOpacity>
+              <ExternalLink0 url={externalUrl0} />
+            </TouchableOpacity>
             <View style={styles.verticalLine}>|</View>
             {/* 3 Links */}
             <View style={styles.leftLinks}>
               <TouchableOpacity style={styles.link}>
-                <Text>Link 1</Text>
+                <ExternalLink1 url={externalUrl1} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.link}>
-                <Text>Download</Text>
+                <ExternalLink2 url={externalUrl2} />
               </TouchableOpacity>
               <TouchableOpacity style={styles.link}>
-                <Text>Report</Text>
+                <ExternalLink3 url={externalUrl3} />
               </TouchableOpacity>
             </View>
           </View>
@@ -35,10 +51,10 @@ function RegisterScreen() {
           {/* Right side: 2 Links */}
           <View style={styles.rightLinks}>
             <TouchableOpacity style={styles.link}>
-              <Text>Register</Text>
+              <ExternalLink4 url={externalUrl4} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.link}>
-              <Text>Login</Text>
+              <ExternalLink5 url={externalUrl5} />
             </TouchableOpacity>
           </View>
         </View>
@@ -65,6 +81,7 @@ function RegisterScreen() {
     leftHeader: {
       flexDirection: 'row',
       alignItems: 'center',
+
     },
     logo: {
       width: 40, // Adjust the width of the logo as needed
@@ -75,6 +92,8 @@ function RegisterScreen() {
     websiteName: {
       fontSize: 20,
       fontWeight: 'bold',
+      marginRight: 5,
+      marginLeft: 5,
       // Other styles for the website name
     },
     leftLinks: {
@@ -88,11 +107,13 @@ function RegisterScreen() {
       alignItems: 'center',
     },
     link: {
+      marginRight: 20,
       // Styles for individual link container
     },
     verticalLine: {
         height: '100%', // Adjust the height to match the header's height
         width: 1,
+        marginLeft: 5,
       },
   });
   
