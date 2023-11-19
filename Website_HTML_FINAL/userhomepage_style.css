@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sticky-container {
+    position: sticky;
+    top: 0;
+}
+
+.part1 {
+    background-color: #ffffff; /* Változtasd meg az alapértelmezett háttérszínt a saját igényeid szerint */
+    z-index: 2; /* A legfelső réteg */
+}
+
+.infinite-container {
+    background-color: #ffffff; /* Változtasd meg az alapértelmezett háttérszínt a saját igényeid szerint */
+    position: sticky;
+    top: 0;
+}
+
+
+.empty-space {
+    height: 100px; }
+
+    .circle-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+        background-color: #3498db;
+        border-radius: 50%;
+        margin: 10px;
+    }
+
+

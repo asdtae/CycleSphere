@@ -1,49 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Support Page</title>
-  <style>
-    /* Embedded CSS */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    .button:hover {
-      background-color: #0056b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            overflow-x: auto;
+            height: 100vh;
+        }
+
+        .fixed-sidebar,
+        .fixed-sidebar-right,
+        .content {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .circle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+        .fixed-sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            padding: 54px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            background-color: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
+        .infinite-text {
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            width: 100%; /* Szélességet a teljes tartalomra állítjuk */
+        }
+
+        /* Egyenlő részekre osztás a bal oldalon */
+        .fixed-sidebar p {
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        }
+
+        /* Egyenlő részekre osztás a jobb oldalon */
+        .fixed-sidebar-right {
+            width: 200px;
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            padding: 70px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
+        .fixed-sidebar-right p {
+            margin: 6;
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        }
+    </style>
+    <title><text align=center>Strike</text></title>
 </head>
 <body>
-  <div class="container">
-    <h1>Support Page</h1>
-    <p>Welcome to our support page! Here you can find information and resources.</p>
-    <p>For immediate assistance, please click the button below:</p>
-    <a href="tel:123456789" class="button">Call Support</a>
 
-    <!-- Embedded JavaScript -->
+    <div id="container">
+        <div class="fixed-sidebar">
+
+            <href=""></href>
+            <p>Username</p>
+         
+            <p>Email</p>
+
+            <tab>Home</p>
+
+            <p>Friends</p>
+             
+            <p>Streak</p>
+
+            
+
+            <a href="file:///C:/Users/simon/Documents/GitHub/UNIHACK2023/Website_HTML_test_code/Settings.html">Settings</a>
+            <p> </p>
+            <a href="https://cyclesphere.asdtae.com/"a>Sing Out</a>
+            
+
+            <!-- További tartalom ... -->
+        </div>
+
+        <div class="content" id="scrollableContent">
+            <div class="infinite-text" id="infiniteText"></div>
+            <div class="circle-container" id="circleContainer"></div>
+        </div>
+
+        <div class="fixed-sidebar-right">
+            <p>Logo</p>
+            
+            <!-- További tartalom ... -->
+        </div>
+    </div>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* ... (az eredeti stílusok maradnak változatlanok) ... */
+
+        .circle-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            margin: 10px;
+        }
+
+    </style>
+    <title>Fixed Sidebar Example</title>
+</head>
+<body>
+
+    <div id="container">
+        <div class="fixed-sidebar">
+            <!-- ... (az eredeti tartalom marad változatlan) ... -->
+        </div>
+
+        <div class="content" id="scrollableContent">
+            <div class="circle-container" id="circleContainer"></div>
+        </div>
+
+        <div class="fixed-sidebar-right">
+            <!-- ... (az eredeti tartalom marad változatlan) ... -->
+        </div>
+    </div>
+
     <script>
-      function displayMessage() {
-        alert("Thank you for reaching out to our support team!");
-      }
+        const circleContainer = document.getElementById('circleContainer');
+        let isScrolling = false;
+
+        function generateCircle() {
+            // Generate circle and append it to the container
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circleContainer.appendChild(circle);
+        }
+
+        window.addEventListener('scroll', function() {
+            isScrolling = !isScrolling;
+
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight && isScrolling) {
+                generateCircle();
+            }
+        });
+
+        window.addEventListener('wheel', function(event) {
+            if (event.deltaY > 0) {
+                generateCircle();
+            }
+        });
     </script>
-  </div>
+
 </body>
 </html>
