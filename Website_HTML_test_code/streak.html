@@ -1,89 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial;}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center; /* A szöveg középre igazítása */
+    }
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
+    /* Style the tab */
+    .tab {
+      display: flex; /* A gombok kiterjesztése egy hosszú sorba */
+      justify-content: center; /* A gombok középre igazítása */
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      margin: 0 5px; /* Kisméretű margók a gombok között */
+    }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-</style>
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+  </style>
 </head>
 <body>
 
-<h2><text align="center">Strike</text></h2>
-<p>Click on the buttons inside the tabbed menu:</p>
+  <h2>Streak</h2>
+  <p>There you can see streak rewards.</p>
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Daily')">Daily</button>
-  <button class="tablinks" onclick="openCity(event, 'Weekly')">Weekly</button>
-  <button class="tablinks" onclick="openCity(event, 'Monthly')">Monthly</button>
-</div>
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Daily')">Daily</button>
+    <button class="tablinks" onclick="openCity(event, 'Weekly')">Weekly</button>
+    <button class="tablinks" onclick="openCity(event, 'Monthly')">Monthly</button>
+  </div>
 
-<div id="Daily" class="tabcontent">
+  <div id="Daily" class="tabcontent" style="background-color: darkred;">
     <h2>+1 point at the end of the day</h2>
-    <p>If you complete tasks certeanily.</p>
-</div>
+    <p>If you complete tasks certainly.</p>
+  </div>
 
-<div id="Weekly" class="tabcontent">
+  <div id="Weekly" class="tabcontent" style="background-color: gold;">
     <h2>+2 point/tasks completed</h2>
-  <p>When you completed tasks in several days in a row.</p>
-</div>
+    <p>When you completed tasks in several days in a row.</p>
+  </div>
 
-<div id="Monthly" class="tabcontent">
+  <div id="Monthly" class="tabcontent" style="background-color: rgb(0, 233, 43);">
     <h2>+5 point/tasks completed</h2>
     <p>When you completed tasks in this month in every day.</p>
-</div>
+  </div>
 
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-   
+  <put.images src="<!DOCTYPE html>
+
+
+  <put images src="logo.png">
+
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+
 </body>
-</html> 
+</html>
