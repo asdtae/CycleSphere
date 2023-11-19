@@ -4,6 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #container {
+            display: flex;
+            overflow-x: auto;
+            height: 100vh;
+        }
+
+        .fixed-sidebar,
+        .fixed-sidebar-right,
+        .content {
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap; /* Módosítottuk a wrap értékét nowrap-ra */
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin: 10px;
+    position: absolute;
+    left: 50%; /* A kör középpontja a tartalom rész közepén */
+    transform: translateX(-50%); /* A kör vízszintes középre igazítása */
+}
+
+        .fixed-sidebar {
+            width: 200px;
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            padding: 54px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            background-color: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
+        .infinite-text {
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            width: 100%; /* Szélességet a teljes tartalomra állítjuk */
+        }
+
+        /* Egyenlő részekre osztás a bal oldalon */
+        .fixed-sidebar p {
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        }
+
+        /* Egyenlő részekre osztás a jobb oldalon */
+        .fixed-sidebar-right {
+            width: 200px;
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            padding: 70px; /* Távolság a felső rész és a tartalom között */
+            box-sizing: border-box; /* Az elem mérete a határokra vonatkozik */
+        }
+
+        .fixed-sidebar-right p {
+            margin: 6;
+            flex: 0 0 calc(16.666% - 10px); /* 100 / 6 = 16.666% - 10px távolság a jobb oldalon */
+        }
+    </style>
+    <title>Fixed Sidebar Example</title>
+</head>
+<body>
+
+    <div id="container">
+        <div class="fixed-sidebar">
+
+            <href=""></href>
+            <p>Username</p>
+         
+            <p>Email</p>
+
+            <tab>Home</p>
+
+            <p>Friends</p>
+             
+            <p>Streak</p>
+
+            
+
+            <a href="https://www.pelda.com">Settings</a>
+            <p> </p>
+
+            <a href="https://www.pelda.com">Log out</a>
+
+            <!-- További tartalom ... -->
+        </div>
+
+        <div class="content" id="scrollableContent">
+            <div class="infinite-text" id="infiniteText"></div>
+            <div class="circle-container" id="circleContainer"></div>
+        </div>
+
+        <div class="fixed-sidebar-right">
+            <p>Logo</p>
+            
+            <!-- További tartalom ... -->
+        </div>
+    </div>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
         /* ... (az eredeti stílusok maradnak változatlanok) ... */
 
         .circle-container {
@@ -20,6 +153,7 @@
             border-radius: 50%;
             margin: 10px;
         }
+
     </style>
     <title>Fixed Sidebar Example</title>
 </head>
@@ -31,7 +165,6 @@
         </div>
 
         <div class="content" id="scrollableContent">
-            <div class="infinite-text" id="infiniteText"></div>
             <div class="circle-container" id="circleContainer"></div>
         </div>
 
@@ -39,39 +172,50 @@
             <!-- ... (az eredeti tartalom marad változatlan) ... -->
         </div>
     </div>
-
+   
     <script>
-        const infiniteText = document.getElementById('infiniteText');
         const circleContainer = document.getElementById('circleContainer');
         let isScrolling = false;
 
-        function generateMoreText() {
-           
-            infiniteText.innerHTML += additionalText;
+        function generateCircles() {
+            for (let i = 0; i < 5; i++) {
+                const circle = document.createElement('div');
+                circle.classList.add('circle');
 
-            // Generate circle and append it to the container
-            const circle = document.createElement('div');
-            circle.classList.add('circle');
-            circleContainer.appendChild(circle);
+                // Középre pozícionálás
+                const centerX = (circleContainer.offsetWidth - 100) / 2;
+                const centerY = (circleContainer.offsetHeight - 100) / 2;
+
+                // Random eltolás a középponttól
+                const randomOffsetX = Math.floor(Math.random() * 50);
+                const randomOffsetY = Math.floor(Math.random() * 50);
+
+                circle.style.left = `${centerX + randomOffsetX}px`;
+                circle.style.top = `${centerY + randomOffsetY}px`;
+
+                circleContainer.appendChild(circle);
+            }
         }
 
+        // Csak egyszer hívjuk meg, amikor az oldal betöltődik
+        generateCircles();
+
         window.addEventListener('scroll', function() {
-            isScrolling = true;
+            isScrolling = !isScrolling;
 
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight && isScrolling) {
-                generateMoreText();
-                isScrolling = false;
+                // Csak akkor generáljunk új köröket, ha a felhasználó elérte az oldal alját
+                generateCircles();
             }
         });
-
-        generateMoreText();
 
         window.addEventListener('wheel', function(event) {
             if (event.deltaY > 0) {
-                generateMoreText();
+                // Csak akkor generáljunk új köröket, ha a felhasználó lefelé görget
+                generateCircles();
             }
         });
     </script>
-
 </body>
 </html>
+
