@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     fontWeight:'italic',
     fontSize:20,
-    padding:20px,
+    padding:20,
     color:'black',
   },
   goals:{
