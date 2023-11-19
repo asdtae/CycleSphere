@@ -11,8 +11,8 @@ CycleSphere is a digital ecosystem merging recycling and social interaction, fos
 
 ## Installation
 
-Scan Me :)
-![qr_code](https://github.com/asdtae/UNIHACK2023/blob/16c7fd6498481adbb1e876027df73eab2a4a6c67/expo/cyclesphere/assets/Untitled(1).png)
+Scan Me :)  
+![qr_code](https://github.com/asdtae/UNIHACK2023/blob/aae724b35eb6b8e41345a007de14490c26b9abb6/expo/cyclesphere/assets/qr.png)
 
 
 ## Usage
