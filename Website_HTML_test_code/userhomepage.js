@@ -4,7 +4,7 @@ let isScrolling = false;
 let isGeneratingContent = false;
 
 function generateMoreText() {
-    const additionalText = " CycleSphere";
+    
 
     // Generate additional text and append it to the paragraph
     infiniteTextParagraph.innerHTML += additionalText;
