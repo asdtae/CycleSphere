@@ -1,66 +1,124 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="Setting_style.css">
-        <script>
-            function openCity(evt, cityName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-  
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-  
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-  
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-        </script>
-    </head>
-    <body>
-        <script src="Settings.js"></script>
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'Apperance')">Apperance</button>
-            <button class="tablinks" onclick="openCity(event, 'General')">General</button>
-            <button class="tablinks" onclick="openCity(event, 'Danger Zone')">Danger Zone</button>
-          </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Setting_style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
 
-          <div class="positioned-element1">
-           
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            border: 6px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 40px 40px;
+            transition: 0.3s;
+            text-align: left;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 400px;
+        }
+
+        .section {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 12px 40px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .kozepreIgazitottSzoveg {
+            text-align: center;
+        }
+
+        .positioned-element {
+            background-color: #3498db;
+            padding: 10px;
+            color: #ffffff;
+        }
+    </style>
+    <title>Settings</title>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tablinks" onclick="openCity(event, 'Apperance')">Apperance</button>
+        <button class="tablinks" onclick="openCity(event, 'General')">General</button>
+        <button class="tablinks" onclick="openCity(event, 'Danger Zone')">Danger Zone</button>
+    </div>
+
+    <div class="container">
+        <div id="Apperance" class="tabcontent">
+            <h3>Apperance</h3>
+            <div class="section">Apperance</div>
+        </div>
+
         <div id="General" class="tabcontent">
             <div class="kozepreIgazitottSzoveg">
                 <h3>General</h3>
             </div>
             <div class="section">Switch Username</div>
-
             <div class="section">Bio</div>
-
             <div class="section">Show Achievements on my profile</div>
-
             <div class="section">Make profile private and hide activity</div>
-          </div></div>
+        </div>
 
-          <div class="positioned-element2">
-            <div id="Apperance" class="tabcontent">
-             <h3>Apperance</h3>
-             
-             <div class="section">Apperance</div>
-            </div>
-          </div>
-          
-          <div class="positioned-element3">
-          <div id="Danger Zone" class="tabcontent">
+        <div id="Danger Zone" class="tabcontent">
             <h3>Danger Zone</h3>
-                <div class="section">Switch Email</div><div class="section">Switch Password</div></div>
+            <div class="section">Switch Email</div>
+            <div class="section">Switch Password</div>
+        </div>
+    </div>
 
-                
-          </div>
-    </body>
-    </html>
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
