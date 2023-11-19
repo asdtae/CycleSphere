@@ -38,18 +38,56 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </View>
-  
-        {/* Other content of the Register Screen */}
-        {/* ... */}
-      </View>
+       </View>
+        {/*Goals*/}
+        <View style={styles.motto}>
+        <TouchableOpacity style={styles.motto}>
+        <Text>Our motto is:"Playfully Recycling for a Positive World: Earn Points, Make a Difference!"</Text>
+        </TouchableOpacity>
+        </View>
+        <View style={styles.goals}>
+        <Text>1.Recycling</Text>  
+        </View>
+        <View style={styles.story}>
+        <Text>Our aim is to achieve sustainability through recycling, avoiding further damage to our environment by unnecessarily purchasing materials.</Text>
+        </View>
+        <View style={styles.goals}>
+        <Text>2.Clean environment</Text>
+        </View>
+        <View style={styles.story}>
+        <Text>By keeping the environment clean we aim to protect our own lives and our planet.By using our app regularly you will have a great impact on combating pollution</Text>
+        </View>
+        <View style={styles.goals}>
+        <Text>Preserving our wildlife</Text>
+        </View>
+        <View style={styles.story}>
+        <Text>Pollution harms everyone: animals, plants, human beings. Proper waste managament can help us significantly.</Text>
+        </View>
+        <View style={styles.story}>
+        <Text>So , sign up and learn about recycling while also finishing daily tasks</Text>
+        </View>
     );
 };
-
 const styles = StyleSheet.create({
   container: {
       flex: 1,
       // Other styles for the main container
     },
+  motto: {
+    alignItems:'center',
+    fontWeight:'italic',
+    fontSize:20,
+    color:'black',
+  },
+  goals:{
+    alignItems:'left',
+    fontWeight:'bold',
+    fontSize:28,
+  },
+  story:{
+    alignItems:'left',
+    fontSize:25,
+  },
     header: {
       flexDirection: 'row',
       justifyContent: 'space-between',

@@ -23,4 +23,4 @@ lorem ipsum
 
 ## Credits
 
-lorem ipsum
+[expo-server-sdk-dotnet](https://github.com/glyphard/expo-server-sdk-dotnet.git)
