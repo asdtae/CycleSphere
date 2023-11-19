@@ -26,10 +26,10 @@
             background-color: #3498db;
             color: #ffffff;
             border: none;
-            padding: 10px;
+            padding: 40px;
             margin-bottom: 10px;
             cursor: pointer;
-            width: 150px;
+            width: 200px;
             text-align: left;
         }
 
@@ -38,9 +38,11 @@
         }
 
         .field {
-            margin-left: 20px;
-        }
-
+    margin-left: 5px;
+    width: 100px;
+    padding: 15px;
+    border: 1px syolid transparent; /* Átlátszó szegély */
+}
         .positioned-element1 {
     position: absolute;
     top: 100px; /* Példaként a felső pozíció 100 pixel */
@@ -61,7 +63,7 @@
 
 .positioned-element3 {
     position: absolute;
-    top: 490px; /* Példaként a felső pozíció 100 pixel */
+    top: 300px; /* Példaként a felső pozíció 100 pixel */
     left: 600px; /* Példaként a bal pozíció 200 pixel */
     background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
     padding: 10px;
@@ -83,9 +85,12 @@
 
     <div class="positioned-element2">
     <div id="General" class="field" style="display:none;">
-        <p>Switch Username</p>
-        <p>Bio</p>
-        <p>Show Achievements on my profile</p>
+        <p>Switch Username</p></div>
+    <div id="General" class="field" style="display:none;">
+        <p>Bio</p></div>
+        <div id="General" class="field" style="display:none;">
+        <p>Show Achievements on my profile</p></div>
+        <div id="General" class="field" style="display:none;">
         <p>Make profile private and hide activity</p>
     </div></div>
 
