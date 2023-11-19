@@ -55,7 +55,7 @@
 
         .tabcontent {
             display: none;
-            padding: 12px 40px;
+            padding: 30px 40px;
             border: 1px solid #ccc;
             border-top: none;
         }
@@ -64,11 +64,34 @@
             text-align: center;
         }
 
-        .positioned-element {
-            background-color: #3498db;
-            padding: 10px;
-            color: #ffffff;
-        }
+        .positioned-element1 {
+    position: absolute;
+    top: 20px; /* Példaként a felső pozíció 100 pixel */
+    left: 500px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
+
+.positioned-element2 {
+    position: absolute;
+    top: 205px; /* Példaként a felső pozíció 100 pixel */
+    left: 500px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
+
+.positioned-element3 {
+    position: absolute;
+    top: 510px; /* Példaként a felső pozíció 100 pixel */
+    left: 500px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ffffff;
+}
+
+
     </style>
     <title>Settings</title>
 </head>
@@ -80,11 +103,13 @@
     </div>
 
     <div class="container">
+        <div class="positioned-element1">
         <div id="Apperance" class="tabcontent">
             <h3>Apperance</h3>
             <div class="section">Apperance</div>
-        </div>
+        </div></div>
 
+        <div class="positioned-element2">
         <div id="General" class="tabcontent">
             <div class="kozepreIgazitottSzoveg">
                 <h3>General</h3>
@@ -93,13 +118,14 @@
             <div class="section">Bio</div>
             <div class="section">Show Achievements on my profile</div>
             <div class="section">Make profile private and hide activity</div>
-        </div>
+        </div></div>
 
+        <div class="positioned-element3">
         <div id="Danger Zone" class="tabcontent">
             <h3>Danger Zone</h3>
             <div class="section">Switch Email</div>
             <div class="section">Switch Password</div>
-        </div>
+        </div></div>
     </div>
 
     <script>
