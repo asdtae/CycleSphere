@@ -1,62 +1,108 @@
-<html>
-    <head>
-        
-        <link rel="stylesheet" href="register_style.css">
-        
-    </head>
-    <body>
-       
-        
-  
-        <div class="empty-space"></div>
-  
-    <h1 align="center">Register</h1>
-    <div class="empty-space"></div>
-    <div class="empty-space"></div>
-    
-    
-    
-    
-    
-</div>
-<div class="input-email">
-    <input type="username" placeholder="Enter your username" class="input-email">
-</div></p></div>
-<div class="empty-space"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100vh;
+        }
 
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
 
-</div><div class="input-email">
-    <input type="email" placeholder="Enter your email" class="input-email">
-</div></p></div>
-<div class="empty-space"></div>
-    
+        .button {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 40px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            width: 200px;
+            text-align: left;
+        }
 
-</div><div class="input-email">
-    <input type="password" placeholder="Enter your password" class="input-email">
-</div></p></div>
-<div class="empty-space"></div>
+        .button:hover {
+            background-color: #2980b9;
+        }
 
-</div><div class="input-email">
-    <input type="password" placeholder="Confirm the password" class="input-email">
-</div></p></div>
-<div class="circle"><p><img src="url-a-kep-fajlja.jpg"></p></div>
+        .positioned-element {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: #3498db;
+            padding: 10px;
+            color: #ffffff;
+        }
 
-<div class="empty-space"></div>
+        .field {
+            margin-right: 10px;
+        }
+    </style>
+    <title>Buttons</title>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button" onclick="showField('Apprentice')">Apprentice</button>
+        <button class="button" onclick="showField('General')">General</button>
+        <button class="button" onclick="showField('DangerZone')">Danger Zone</button>
+    </div>
 
-</div>
+    <div id="Apprentice" class="positioned-element" style="display:none;"></div>
+    <div id="General" class="positioned-element" style="display:none;"></div>
+    <div id="DangerZone" class="positioned-element" style="display:none;"></div>
 
+    <script>
+        function showField(fieldId) {
+            // Elrejtjük az összes mezőt
+            document.getElementById('Apprentice').style.display = 'none';
+            document.getElementById('General').style.display = 'none';
+            document.getElementById('DangerZone').style.display = 'none';
 
+            // Megjelenítjük a kiválasztott mezőt
+            var field = document.getElementById(fieldId);
+            field.style.display = 'flex';
 
-   
+            // Kitöröljük az esetleges korábbi tartalmat
+            field.innerHTML = '';
 
+            // Hozzáadjuk az új szövegeket külön mezőkbe
+            if (fieldId === 'Apprentice') {
+                addTextToField('Switch Apperance', field);
+            } else if (fieldId === 'General') {
+                addTextToField('Switch Username', field);
+                addTextToField('Bio', field);
+                addTextToField('Show Achievements on my profile', field);
+                addTextToField('Make profile private and hide activity', field);
+            } else if (fieldId === 'DangerZone') {
+                addTextToField('Switch Email', field);
+                addTextToField('Switch Password', field);
+            }
+        }
 
-   
+        function addTextToField(text, field) {
+            var paragraph = document.createElement('p');
+            paragraph.textContent = text;
 
+            var div = document.createElement('div');
+            div.classList.add('field');
+            div.appendChild(paragraph);
 
-    
-    
-    
-    
-
+            field.appendChild(div);
+        }
+    </script>
 </body>
 </html>
