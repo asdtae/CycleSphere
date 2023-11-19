@@ -34,12 +34,12 @@
 .circle {
     width: 100px;
     height: 100px;
-    background-color: #3498db;
+    background-color: #000000;
     border-radius: 50%;
     margin: 10px;
     position: absolute;
     left: 50%; /* A kör középpontja a tartalom rész közepén */
-    transform: translateX(-50%); /* A kör vízszintes középre igazítása */
+    transform: translateX(-25%); /* A kör vízszintes középre igazítása */
 }
 
         .fixed-sidebar {
@@ -109,6 +109,7 @@
              
             <p>Streak</p>
 
+           
             
 
             <a href="https://www.pelda.com">Settings</a>
@@ -146,13 +147,7 @@
             flex-wrap: wrap;
         }
 
-        .circle {
-            width: 50px;
-            height: 50px;
-            background-color: #3498db;
-            border-radius: 50%;
-            margin: 10px;
-        }
+        
 
     </style>
     <title>Fixed Sidebar Example</title>
@@ -173,49 +168,17 @@
         </div>
     </div>
    
-    <script>
+    <<script>
         const circleContainer = document.getElementById('circleContainer');
         let isScrolling = false;
 
-        function generateCircles() {
-            for (let i = 0; i < 5; i++) {
-                const circle = document.createElement('div');
-                circle.classList.add('circle');
-
-                // Középre pozícionálás
-                const centerX = (circleContainer.offsetWidth - 100) / 2;
-                const centerY = (circleContainer.offsetHeight - 100) / 2;
-
-                // Random eltolás a középponttól
-                const randomOffsetX = Math.floor(Math.random() * 50);
-                const randomOffsetY = Math.floor(Math.random() * 50);
-
-                circle.style.left = `${centerX + randomOffsetX}px`;
-                circle.style.top = `${centerY + randomOffsetY}px`;
-
-                circleContainer.appendChild(circle);
-            }
+        function generateCircle() {
+            // Generate circle and append it to the container
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circleContainer.appendChild(circle);
         }
 
-        // Csak egyszer hívjuk meg, amikor az oldal betöltődik
-        generateCircles();
-
         window.addEventListener('scroll', function() {
-            isScrolling = !isScrolling;
-
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight && isScrolling) {
-                // Csak akkor generáljunk új köröket, ha a felhasználó elérte az oldal alját
-                generateCircles();
-            }
-        });
-
-        window.addEventListener('wheel', function(event) {
-            if (event.deltaY > 0) {
-                // Csak akkor generáljunk új köröket, ha a felhasználó lefelé görget
-                generateCircles();
-            }
-        });
-    </script>
 </body>
 </html>
-
