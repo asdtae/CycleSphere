@@ -54,7 +54,7 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <Text>{2.Clean environment}</Text>
         </View>
         <View style={styles.story}>
-        <Text>{By keeping the environment clean we aim to protect our own lives and our planet.By using our app regularly you will have a great impact on combating pollution}</Text>
+        <Text>{By keeping the environment clean we aim to protect our own lives and our planet.Using our app regularly guarantees combatting polution in a fun way.}</Text>
         </View>
         <View style={styles.goals}>
         <Text>{3.Preserving our wildlife}</Text>
