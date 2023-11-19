@@ -1,0 +1,41 @@
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:   0px; /* Példaként cellák közötti tér hozzáadása. */
+}
+
+.section {
+    background-color: rgb(3, 1, 1);
+    padding: 0px;
+}
+
+.empty-space {
+    height: 50px; }
+
+    .rectangle {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr; /* Itt változtathatod az oszlopok szélességét */
+        gap: 10px; /* Változtathatod a részecskék közötti rés méretét */
+    }
+    
+    .part {
+        height: 500px; /* Változtasd a magasságot az igényeid szerint */
+        text-align: center;
+    }
+    
+    .part1 {
+        background-color: rgba(91, 2, 2, 0.732); /* Változtasd a színeket az igényeid szerint */
+        margin-left: +50px;
+        }
+    
+    .part2 {
+        background-color: #99ff99;
+    }
+    
+    .part3 {
+        background-color: #9999ff;
+        margin-right: +50px
+    }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+        .kozepreIgazitottSzoveg {
+            text-align: center;
+        }
+
+        .positioned-element1 {
+    position: absolute;
+    top: 20px; /* Példaként a felső pozíció 100 pixel */
+    left: 500px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #db3434; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #f70606;
+}
+
+.positioned-element2 {
+    position: absolute;
+    top: 205px; /* Példaként a felső pozíció 100 pixel */
+    left: 500px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ff0000;
+}
+
+.positioned-element3 {
+    position: absolute;
+    top: 510px; /* Példaként a felső pozíció 100 pixel */
+    left: 500px; /* Példaként a bal pozíció 200 pixel */
+    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
+    padding: 10px;
+    color: #ff0000;
+}
+
