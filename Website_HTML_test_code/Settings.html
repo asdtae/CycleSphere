@@ -85,12 +85,18 @@
 
     <div class="positioned-element2">
     <div id="General" class="field" style="display:none;">
-        <p>Switch Username</p></div>
-    <div id="General" class="field" style="display:none;">
-        <p>Bio</p></div>
-        <div id="General" class="field" style="display:none;">
-        <p>Show Achievements on my profile</p></div>
-        <div id="General" class="field" style="display:none;">
+        <p>Switch Username</p>
+
+        
+    
+        <p>Bio</p>
+
+      
+        
+        <p>Show Achievements on my profile</p>
+
+        
+        
         <p>Make profile private and hide activity</p>
     </div></div>
 
@@ -109,6 +115,20 @@
 
             // Megjelenítjük a kiválasztott mezőt
             document.getElementById(fieldId).style.display = 'block';
+        }
+    </script>
+    <script>
+        var fieldCount = 0;
+
+        function addField() {
+            fieldCount++;
+
+            var container = document.getElementById('container');
+            var newField = document.createElement('div');
+            newField.className = 'field';
+            newField.innerHTML = '<label>Mező ' + fieldCount + ':</label> <input type="text">';
+
+            container.appendChild(newField);
         }
     </script>
 </body>
