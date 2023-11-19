@@ -17,11 +17,11 @@
         .tabs {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start; /* Balra igazítás */
+    justify-content: flex-start; /* Felülre igazítás */
     border: 6px solid #ccc;
     background-color: #f1f1f1;
-    width: 200px; /* Adj meg egy fix szélességet a gomboknak */
-    height: 200px;
+    width: 200px;
 }
 .tab button {
     background-color: inherit;
@@ -47,10 +47,14 @@
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            padding: 400px;
-        }
+    display: flex;
+    flex-direction: column;
+    padding: 400px;
+    align-items: flex-start; /* Balra igazítás */
+    justify-content: flex-start; /* Felülre igazítás */
+    margin: 0; /* Margó nullázása minden irányban */
+}
+
 
         .section {
             height: 40px;
