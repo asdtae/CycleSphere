@@ -41,29 +41,29 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         {/*Goals*/}
         <View style={styles.motto}>
         <TouchableOpacity style={styles.motto}>
-        <Text>{"Our motto is:Playfully Recycling for a Positive World: Earn Points, Make a Difference!"}</Text>
+        <Text>Our motto is:Playfully Recycling for a Positive World: Earn Points, Make a Difference!</Text>
         </TouchableOpacity>
         </View>
         <View style={styles.goals}>
         <Text>"1.Recycling"</Text>  
         </View>
         <View style={styles.story}>
-        <Text>"Our aim is to achieve sustainability through recycling, avoiding further damage to our environment by unnecessarily purchasing materials."</Text>
+        <Text>Our aim is to achieve sustainability through recycling, avoiding further damage to our environment by unnecessarily purchasing materials.</Text>
         </View>
         <View style={styles.goals}>
-        <Text>"2.Clean environment"</Text>
+        <Text>2.Clean environment</Text>
         </View>
         <View style={styles.story}>
-        <Text>"By keeping the environment clean we aim to protect our own lives and our planet.Using our app regularly guarantees combatting polution in a fun way."</Text>
+        <Text>By keeping the environment clean we aim to protect our own lives and our planet.Using our app regularly guarantees combatting polution in a fun way.</Text>
         </View>
         <View style={styles.goals}>
-        <Text>"3.Preserving our wildlife"</Text>
+        <Text>3.Preserving our wildlife</Text>
         </View>
         <View style={styles.story}>
-        <Text>"Pollution harms everyone: animals, plants, human beings. Proper waste managament can help us significantly."</Text>
+        <Text>Pollution harms everyone: animals, plants, human beings. Proper waste managament can help us significantly.</Text>
         </View>
         <View style={styles.story}>
-        <Text>"So , sign up and learn about recycling while also finishing daily tasks"</Text>
+        <Text>So , sign up and learn about recycling while also finishing daily tasks</Text>
         </View>
   </View>
     );
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     },
   motto: {
     alignItems:'center',
-    //fontWeight:'italic',
+    fontWeight:'italic',
     fontSize:20,
     color:'black',
   },
