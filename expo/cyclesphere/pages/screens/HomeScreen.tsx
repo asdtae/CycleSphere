@@ -38,7 +38,7 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </View>
-  
+       </View>
         {/*Goals*/}
         <View style={styles.motto}>
         <TouchableOpacity style={styles.motto}>
@@ -66,7 +66,6 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <View style={styles.story}>
         <Text>So , sign up and learn about recycling while also finishing daily tasks</Text>
         </View>
-    </View>
     );
 };
 const styles = StyleSheet.create({
