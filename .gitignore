@@ -4,3 +4,5 @@
 .vs/slnx.sqlite
 *.sqlite
 *.sqlite
+*.vsidx
+*.sqlite
