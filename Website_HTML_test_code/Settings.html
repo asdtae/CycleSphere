@@ -10,26 +10,26 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Gombok balra igazítása */
-            height: 100vh; /* Ablak teljes magasságúra állítása */
-            /* Gombok középre igazítása fentről és lentről nézve */
+            align-items: flex-start;
+            height: 100vh;
         }
 
         .button-container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Gombok balra igazítása */
-            margin-left:100px; /* Kis távolság a bal széltől */
-        margin-top: 100px;}
+            align-items: flex-start;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
 
         .button {
             background-color: #3498db;
             color: #ffffff;
             border: none;
-            padding: 10px;
+            padding: 40px;
             margin-bottom: 10px;
             cursor: pointer;
-            width: 150px;
+            width: 200px;
             text-align: left;
         }
 
@@ -38,35 +38,26 @@
         }
 
         .field {
-            margin-left: 20px;
+            margin-left: 5px;
+            width: 100px;
+            padding: 15px;
+            border: 1px solid transparent;
         }
 
-        .positioned-element1 {
-    position: absolute;
-    top: 100px; /* Példaként a felső pozíció 100 pixel */
-    left: 600px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
-    padding: 10px;
-    color: #ffffff;
-}
+        .positioned-element1,
+        .positioned-element2,
+        .positioned-element3 {
+            position: absolute;
+            top: 100px;
+            left: 600px;
+            background-color: #3498db;
+            padding: 10px;
+            color: #ffffff;
+        }
 
-.positioned-element2 {
-    position: absolute;
-    top: 205px; /* Példaként a felső pozíció 100 pixel */
-    left: 600px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
-    padding: 10px;
-    color: #ffffff;
-}
-
-.positioned-element3 {
-    position: absolute;
-    top: 490px; /* Példaként a felső pozíció 100 pixel */
-    left: 600px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
-    padding: 10px;
-    color: #ffffff;
-}
+        .field p {
+            margin: 0;
+        }
     </style>
     <title>Buttons</title>
 </head>
@@ -76,34 +67,57 @@
         <button class="button" onclick="showField('General')">General</button>
         <button class="button" onclick="showField('DangerZone')">Danger Zone</button>
     </div>
+
     <div class="positioned-element1">
-    <div id="Apperance" class="field" style="display:none;">
-        <p>Apperance</p>
-    </div></div>
+        <div id="Apperance" class="field" style="display:none;">
+            <p>Apperance</p>
+        </div>
+    </div>
 
     <div class="positioned-element2">
-    <div id="General" class="field" style="display:none;">
-        <p>Switch Username</p>
-        <p>Bio</p>
-        <p>Show Achievements on my profile</p>
-        <p>Make profile private and hide activity</p>
-    </div></div>
+        <div id="General" class="field" style="display:none;">
+            <p>Switch Username</p>
+        </div>
+        <div id="General2" class="field" style="display:none;">
+            <p>Bio</p>
+        </div>
+        <div id="General3" class="field" style="display:none;">
+            <p>Show Achievements on my profile</p>
+        </div>
+        <div id="General4" class="field" style="display:none;">
+            <p>Make profile private and hide activity</p>
+        </div>
+    </div>
 
     <div class="positioned-element3">
-    <div id="DangerZone" class="field" style="display:none;">
-        <p>Switch Email</p>
-        <p>Switch Password</p>
-    </div></div>
+        <div id="DangerZone" class="field" style="display:none;">
+            <p>Switch Email</p>
+        </div>
+        <div id="DangerZone2" class="field" style="display:none;">
+            <p>Switch Password</p>
+        </div>
+    </div>
 
     <script>
         function showField(fieldId) {
             // Elrejtjük az összes mezőt
             document.getElementById('Apperance').style.display = 'none';
             document.getElementById('General').style.display = 'none';
+            document.getElementById('General2').style.display = 'none';
+            document.getElementById('General3').style.display = 'none';
+            document.getElementById('General4').style.display = 'none';
             document.getElementById('DangerZone').style.display = 'none';
+            document.getElementById('DangerZone2').style.display = 'none';
 
             // Megjelenítjük a kiválasztott mezőt
             document.getElementById(fieldId).style.display = 'block';
+
+            // Az összes p elemet külön sorba rendezzük
+            var paragraphs = document.getElementById(fieldId).querySelectorAll('p');
+            paragraphs.forEach(function (paragraph, index) {
+                var fieldNumber = index + 1;
+                document.getElementById(fieldId + fieldNumber).style.display = 'block';
+            });
         }
     </script>
 </body>
