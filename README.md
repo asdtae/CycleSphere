@@ -17,12 +17,13 @@ Scan Me :)
 
 ## Usage
 
-lorem ipsum
-
-## Features
-
-lorem ipsum
+1. Download the app.
+2. Register or Log In.
+3. Do your daily quests.
+4. Earn points, save money.
+5. & most importantly have fun!
 
 ## Credits
 
 [expo-server-sdk-dotnet](https://github.com/glyphard/expo-server-sdk-dotnet.git)
+[expo](https://github.com/expo/expo)
