@@ -38,7 +38,6 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             </TouchableOpacity>
           </View>
         </View>
-       </View>
         {/*Goals*/}
         <View style={styles.motto}>
         <TouchableOpacity style={styles.motto}>
@@ -58,7 +57,7 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <Text>By keeping the environment clean we aim to protect our own lives and our planet.By using our app regularly you will have a great impact on combating pollution</Text>
         </View>
         <View style={styles.goals}>
-        <Text>Preserving our wildlife</Text>
+        <Text>3.Preserving our wildlife</Text>
         </View>
         <View style={styles.story}>
         <Text>Pollution harms everyone: animals, plants, human beings. Proper waste managament can help us significantly.</Text>
@@ -66,6 +65,7 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <View style={styles.story}>
         <Text>So , sign up and learn about recycling while also finishing daily tasks</Text>
         </View>
+  </View>
     );
 };
 const styles = StyleSheet.create({
