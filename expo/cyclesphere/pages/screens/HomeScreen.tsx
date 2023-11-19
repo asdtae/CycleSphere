@@ -41,11 +41,11 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         {/*Goals*/}
         <View style={styles.motto}>
         <TouchableOpacity style={styles.motto}>
-        <Text>Our motto is:Playfully Recycling for a Positive World: Earn Points, Make a Difference!</Text>
+        <Text>Our motto is: Playfully Recycling for a Positive World: Earn Points, Make a Difference!</Text>
         </TouchableOpacity>
         </View>
         <View style={styles.goals}>
-        <Text>"1.Recycling"</Text>  
+        <Text>1.Recycling</Text>  
         </View>
         <View style={styles.story}>
         <Text>Our aim is to achieve sustainability through recycling, avoiding further damage to our environment by unnecessarily purchasing materials.</Text>
@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     fontWeight:'italic',
     fontSize:20,
+    padding:20px,
     color:'black',
   },
   goals:{
