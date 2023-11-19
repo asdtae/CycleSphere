@@ -22,7 +22,7 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View style={styles.verticalLine}>|</View>
             {/* 3 Links */}
             <View style={styles.leftLinks}>
-              <a style={styles.link} href='https://cyclesphere.asdtae.com/'>Green Space</a>
+              <a style={styles.link} href='https://cyclesphere.asdtae.com/'>Green Spac</a>
               <a style={styles.link} href='https://download.asdtae.com/'>Download</a>
               <a style={styles.link} href='https://support.asdtae.com/'>Support</a>
             </View>
