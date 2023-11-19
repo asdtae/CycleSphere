@@ -25,5 +25,5 @@ Scan Me :)
 
 ## Credits
 
-[expo-server-sdk-dotnet](https://github.com/glyphard/expo-server-sdk-dotnet.git)
+[expo-server-sdk-dotnet](https://github.com/glyphard/expo-server-sdk-dotnet.git)  
 [expo](https://github.com/expo/expo)
