@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Image, Linking,
 } from 'react-native';
-import ExternalLink0 from './ExternalLink0';
-import ExternalLink1 from './ExternalLink1';
-import ExternalLink2 from './ExternalLink2';
-import ExternalLink3 from './ExternalLink3';
-import ExternalLink4 from './ExternalLink4';
-import ExternalLink5 from './ExternalLink5';
 
+import ExternalLink1 from '../home/ExternalLink1';
+import ExternalLink2 from '../home/ExternalLink2';
+import ExternalLink3 from '../home/ExternalLink3';
 
-function RegisterScreen() {
-  const externalUrl0 = 'https://www.example.com'
-  const externalUrl1 = 'https://www.example.com'
-  const externalUrl2 = 'https://www.example.com'
-  const externalUrl3 = 'https://www.example.com'
-  const externalUrl4 = 'https://www.example.com'
-  const externalUrl5 = 'https://www.example.com'
-  
-    return (
-      <View style={styles.container}>
+const externalUrl1 = 'https://www.example.com'
+const externalUrl2 = 'https://www.example.com'
+const externalUrl3 = 'https://www.example.com'
+
+const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
+
+  return (
+    <View style={styles.container}>
         {/* Header */}
         <View style={styles.header}>
           {/* Left side: Logo and 3 links */}
@@ -29,9 +24,8 @@ function RegisterScreen() {
             style={styles.logo}
             />
             {/* Website Name */}
-            
-            <TouchableOpacity>
-              <ExternalLink0 url={externalUrl0} />
+            <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
+              <Text>CycleSphere</Text>
             </TouchableOpacity>
             <View style={styles.verticalLine}>|</View>
             {/* 3 Links */}
@@ -50,11 +44,11 @@ function RegisterScreen() {
   
           {/* Right side: 2 Links */}
           <View style={styles.rightLinks}>
-            <TouchableOpacity style={styles.link}>
-              <ExternalLink4 url={externalUrl4} />
+            <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('RegisterScreen')}>
+              <Text>Register</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.link}>
-              <ExternalLink5 url={externalUrl5} />
+            <TouchableOpacity style={styles.link} onPress={() => navigation.navigate('LoginScreen')}>
+              <Text>Login</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -63,10 +57,10 @@ function RegisterScreen() {
         {/* ... */}
       </View>
     );
-  }
-  
-  const styles = StyleSheet.create({
-    container: {
+};
+
+const styles = StyleSheet.create({
+  container: {
       flex: 1,
       // Other styles for the main container
     },
@@ -115,6 +109,6 @@ function RegisterScreen() {
         width: 1,
         marginLeft: 5,
       },
-  });
-  
-  export default RegisterScreen;
+});
+
+export default HomeScreen;

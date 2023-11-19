@@ -5,7 +5,7 @@ import * as ImagePicker from 'expo-image-picker';
 import * as SecureStore from 'expo-secure-store';
 import zxcvbn from 'zxcvbn'; // For password strength checking
 
-function RegisterScreen() {
+const RegisterScreen: React.FC = () => {
   const [inputs, setInputs] = useState({
     username: '',
     email: '',
