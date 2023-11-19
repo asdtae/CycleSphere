@@ -1,126 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: black;
-            margin: 10;
-            padding: 10;
-            font-family: Arial, sans-serif;
-            display: flex;
-            align-items: flex-start;
-            height: 100vh;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
 
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            margin-right: 20px;
-            margin-top: 300px;
-        }
-
-        .button {
-            background-color: #3498db;
-            color: #ffffff;
-            border: none;
-            padding: 20px;
-            margin-bottom: 10px;
-            cursor: pointer;
-            width: 200px;
-            text-align: left;
-        }
-
-        .button:hover {
-            background-color: #2980b9;
-        }
-
-        .positioned-element {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end; /* Mezők jobbra helyezése */
-            margin-left: 10px;
-        }
-        .positioned-element1 {
-    position: absolute;
-    top: 220px; /* Példaként a felső pozíció 100 pixel */
-    left: 300px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
-    padding: 10px;
-    color: #ffffff;
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
-.positioned-element2 {
-    position: absolute;
-    top: 335px; /* Példaként a felső pozíció 100 pixel */
-    left: 300px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
-    padding: 10px;
-    color: #ffffff;
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-.positioned-element3 {
-    position: absolute;
-    top: 450px; /* Példaként a felső pozíció 100 pixel */
-    left: 300px; /* Példaként a bal pozíció 200 pixel */
-    background-color: #3498db; /* Háttérszín módosítása az igényeid szerint */
-    padding: 10px;
-    color: #ffffff;
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
 }
 
-        .field {
-            margin: 0 0 0 0;
-            padding: 30px;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 2px solid #3498db;
-        }
-    </style>
-    <title>Buttons</title>
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
 </head>
-<body >
-    
-    <div class="button-container">
-        <button class="button" onclick="showField('Daily')">Daily</button>
-        <button class="button" onclick="showField('Weekly')">Weekly</button>
-        <button class="button" onclick="showField('Monthly')">Monthly</button>
-    </div>
+<body>
 
-    <div id="Apprentice" class="positioned-element1" style="display:none;"></div>
-    <div id="General" class="positioned-element2" style="display:none;"></div>
-    <div id="DangerZone" class="positioned-element3" style="display:none;"></div>
+<h2><text align="center">Strike</text></h2>
+<p>Click on the buttons inside the tabbed menu:</p>
 
-    <script>
-        function showField(fieldId) {
-            document.getElementById('Daily').style.display = 'none';
-            document.getElementById('Weekly').style.display = 'none';
-            document.getElementById('Monthly').style.display = 'none';
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Daily')">Daily</button>
+  <button class="tablinks" onclick="openCity(event, 'Weekly')">Weekly</button>
+  <button class="tablinks" onclick="openCity(event, 'Monthly')">Monthly</button>
+</div>
 
-            var field = document.getElementById(fieldId);
-            field.style.display = 'flex';
-            field.innerHTML = '';
+<div id="Daily" class="tabcontent">
+    <h2>+1 point at the end of the day</h2>
+    <p>If you complete tasks certeanily.</p>
+</div>
 
-            if (fieldId === 'Daily') {
-                addTextToField('Switch Daily', field);
-            } else if (fieldId === 'Weekly') {
-                addTextToField('Switch Username', field);
-                addTextToField('Bio', field);
-                addTextToField('Show Achievements on my profile', field);
-                addTextToField('Make profile private and hide activity', field);
-            } else if (fieldId === 'DangerZone') {
-                addTextToField('Switch Email', field);
-                addTextToField('Switch Password', field);
-            }
-        }
+<div id="Weekly" class="tabcontent">
+    <h2>+2 point/tasks completed</h2>
+  <p>When you completed tasks in several days in a row.</p>
+</div>
 
-        function addTextToField(text, field) {
-            var div = document.createElement('div');
-            div.classList.add('field');
-            div.textContent = text;
-            field.appendChild(div);
-        }
-    </script>
+<div id="Monthly" class="tabcontent">
+    <h2>+5 point/tasks completed</h2>
+    <p>When you completed tasks in this month in every day.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
 </body>
-</html>
+</html> 
