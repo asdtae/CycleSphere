@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     fontWeight:'italic',
     fontSize:20,
+    color:'black',
   },
   goals:{
     alignItems:'left',
