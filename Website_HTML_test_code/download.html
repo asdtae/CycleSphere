@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Page</title>
+  <style>
+    /* Embedded CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+    .download-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .download-link:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Download Page</h1>
+  <p>Welcome to the download page!</p>
+  
+  <!-- Download link -->
+  <a href="https://github.com/asdtae/UNIHACK2023/archive/refs/tags/beta.zip" download>Download File</a>
+
+  <script>
+    // Embedded JavaScript
+    // Function to log a message when the download link is clicked
+    document.querySelector('.download-link').addEventListener('click', function() {
+      console.log('File download initiated!');
+    });
+  </script>
+</body>
+</html>

@@ -2,14 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, TouchableOpacity, Image, Linking,
 } from 'react-native';
 
-import ExternalLink1 from '../home/ExternalLink1';
-import ExternalLink2 from '../home/ExternalLink2';
-import ExternalLink3 from '../home/ExternalLink3';
-
-const externalUrl1 = 'https://www.example.com'
-const externalUrl2 = 'https://www.example.com'
-const externalUrl3 = 'https://www.example.com'
-
 const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
 
   return (
@@ -30,15 +22,9 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View style={styles.verticalLine}>|</View>
             {/* 3 Links */}
             <View style={styles.leftLinks}>
-              <TouchableOpacity style={styles.link}>
-                <ExternalLink1 url={externalUrl1} />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.link}>
-                <ExternalLink2 url={externalUrl2} />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.link}>
-                <ExternalLink3 url={externalUrl3} />
-              </TouchableOpacity>
+              <a style={styles.link} href='https://cyclesphere.asdtae.com/'>Green Space</a>
+              <a style={styles.link} href='https://download.asdtae.com/'>Download</a>
+              <a style={styles.link} href='https://support.asdtae.com/'>Support</a>
             </View>
           </View>
   
@@ -102,6 +88,8 @@ const styles = StyleSheet.create({
     },
     link: {
       marginRight: 20,
+      color: 'black',
+      textDecorationLine: 'none',
       // Styles for individual link container
     },
     verticalLine: {
