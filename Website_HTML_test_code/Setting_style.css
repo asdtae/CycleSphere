@@ -1,19 +1,29 @@
-.tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Hozzáadott sor - balra igazítás */
-    align-self: flex-start; /* Hozzáadott sor - felülírja a container igazítását */
-    transform: translate(+280%, -240%)
-}
-
-
-
 .container {
     display: flex;
     flex-direction: column;
     padding: 400px;
-    align-items: flex-start; /* Hozzáadott sor - balra igazítás */
-    margin-left: 600px;
+    align-items: flex-start;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 60px;
+    padding: 20px;
+    transition: 0.3s;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 10px; /* Hozzáadott sor - térköz a gombok között */
 }
 
 .positioned-element1 {
