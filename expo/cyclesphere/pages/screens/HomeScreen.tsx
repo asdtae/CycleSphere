@@ -41,7 +41,8 @@ const HomeScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         {/*Goals*/}
         <View style={styles.motto}>
         <TouchableOpacity style={styles.motto}>
-        <Text>{"Our motto is:Playfully Recycling for a Positive World: Earn Points, Make a Difference!"}</Text>
+        const motto="Our motto is:Playfully Recycling for a Positive World: Earn Points, Make a Difference!";
+        <Text>{motto}</Text>
         </TouchableOpacity>
         </View>
         <View style={styles.goals}>
