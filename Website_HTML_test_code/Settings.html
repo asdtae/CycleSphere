@@ -14,22 +14,23 @@
         }
 
         .tabs {
-            display: flex;
-            flex-direction: column;
-            border: 6px solid #ccc;
-            background-color: #f1f1f1;
-        }
+    display: flex;
+    flex-direction: column;
+    border: 6px solid #ccc;
+    background-color: #f1f1f1;
+    align-items: flex-start; /* Hozzáadva, hogy a gombok balra igazodjanak */
+}
 
-        .tab button {
+.tab button {
     background-color: inherit;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 60px 70px; /* Módosítsd az értékeket a kívánt méretre */
+    padding: 20px; /* Módosítsd az értékeket a kívánt méretre */
     transition: 0.3s;
-    width: 200%; /* A szélesség 100%-ra állítása a tartalomnak megfelelően */
-    height: 100px; /* Módosítsd az értéket a kívánt méretre */
-}
+    width: 100%; /* A szélesség 100%-ra állítása a tartalomnak megfelelően */
+    text-align: left; /* A szöveg balra igazítása */
+    box-sizing: border-box; /* Az elem méretének kalkulálása beleértve a padding-et is */
 }
 
         .tab button:hover {
