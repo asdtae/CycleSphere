@@ -6,3 +6,4 @@
 *.sqlite
 *.vsidx
 *.sqlite
+/node_modules
